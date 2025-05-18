@@ -4,7 +4,7 @@ import { Button } from "./Button.js";
 
 export default {
   component: Button,
-  tags: ["autodocs"],
+  // tags: ["autodocs"],
   args: {
     children: "Click me",
     onClick: fn(),

@@ -6,7 +6,7 @@ import { cn } from "../../lib/utils.js";
 import "../../style.css";
 
 const buttonVariants = cva(
-  "font-sans font-medium px-4 h-10 rounded-lg cursor-pointer ring-offset-2 border border-transparent disabled:opacity-40",
+  "flex items-center justify-center leading-none font-sans font-medium px-4 h-10 rounded-lg cursor-pointer ring-offset-2 border border-transparent disabled:opacity-40",
   {
     variants: {
       color: {
@@ -143,14 +143,21 @@ export type ButtonProps = Omit<
   };
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, color, variant, size, asChild = false, ...props }, ref) => {
+  (
+    { className, color, variant, size, children, asChild = false, ...props },
+    ref,
+  ) => {
     const Comp = asChild ? Slot : "button";
     return (
       <Comp
         className={cn(buttonVariants({ color, variant, size, className }))}
         ref={ref}
         {...props}
-      />
+      >
+        {/* <span> */}
+        {children}
+        {/* </span> */}
+      </Comp>
     );
   },
 );
