@@ -6,7 +6,16 @@ import { cn } from "../../lib/utils.js";
 import "../../style.css";
 
 const buttonVariants = cva(
-  "flex items-center justify-center leading-none font-sans font-medium px-4 h-10 rounded-lg cursor-pointer ring-offset-2 border border-transparent disabled:opacity-40",
+  `
+    flex items-center justify-center
+    px-4 h-10
+    rounded-lg cursor-pointer
+    border border-transparent
+    text-base
+    ring-offset-2
+    leading-none font-sans font-medium
+    disabled:opacity-40
+  `,
   {
     variants: {
       color: {

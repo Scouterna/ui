@@ -1,8 +1,8 @@
 import type { Meta, Preview } from "@storybook/react";
-import { FormField, FormLabel } from "./Form.js";
+import * as Form from "./Form.js";
 
 export default {
-  component: FormField,
+  component: Form.Field,
   argTypes: {
     children: {
       // biome-ignore lint/suspicious/noExplicitAny: There is no proper way to hide it
@@ -15,7 +15,8 @@ export const FullExample = {
   args: {
     children: (
       <>
-        <FormLabel htmlFor="input">Hello!</FormLabel>
+        <Form.Label htmlFor="my-input">Email</Form.Label>
+        <Form.Input id="my-input" />
       </>
     ),
   },

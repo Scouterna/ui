@@ -2,13 +2,13 @@ import { Slot } from "@radix-ui/react-slot";
 import { forwardRef } from "react";
 import { cn } from "../../lib/utils.js";
 
-export type FormFieldProps = React.HTMLAttributes<HTMLDivElement> & {
+export type FieldProps = React.HTMLAttributes<HTMLDivElement> & {
   asChild?: boolean;
   label: string;
   labelFor: string;
 };
 
-const FormField = forwardRef<HTMLDivElement, FormFieldProps>(
+const Field = forwardRef<HTMLDivElement, FieldProps>(
   (
     { className, asChild = false, label, labelFor, children, ...props },
     ref,
@@ -22,19 +22,60 @@ const FormField = forwardRef<HTMLDivElement, FormFieldProps>(
     );
   },
 );
-FormField.displayName = "FormField";
+Field.displayName = "Field";
 
-export type FormLabelProps = React.LabelHTMLAttributes<HTMLLabelElement> & {
+export type LabelProps = React.LabelHTMLAttributes<HTMLLabelElement> & {
   // Make htmlFor required
   htmlFor: string;
 };
 
-const FormLabel = forwardRef<HTMLLabelElement, FormLabelProps>(
+const Label = forwardRef<HTMLLabelElement, LabelProps>(
   ({ className, ...props }, ref) => {
-    // biome-ignore lint/a11y/noLabelWithoutControl: It's there through the props
-    return <label className={cn("")} ref={ref} {...props} />;
+    return (
+      // biome-ignore lint/a11y/noLabelWithoutControl: It's there through the props
+      <label
+        className={cn("font-bold text-sm text-gray-dark")}
+        ref={ref}
+        {...props}
+      />
+    );
   },
 );
-FormLabel.displayName = "FormLabel";
+Label.displayName = "Label";
 
-export { FormField, FormLabel };
+export type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
+  // Make id required
+  id: string;
+};
+
+const Input = forwardRef<HTMLInputElement, InputProps>(
+  ({ className, type = "text", ...props }, ref) => {
+    return (
+      <input
+        type={type}
+        className={cn(
+          `
+            flex
+            h-10 w-full px-3 py-2
+            rounded-lg
+            border border-gray-300
+            bg-gray-100
+            text-base
+            file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground
+            placeholder:text-muted-foreground
+            focus-visible:outline-none
+            focus-visible:border-gray-500
+            disabled:cursor-not-allowed
+            disabled:opacity-50
+          `,
+          className,
+        )}
+        ref={ref}
+        {...props}
+      />
+    );
+  },
+);
+Input.displayName = "Input";
+
+export { Field, Label, Input };
