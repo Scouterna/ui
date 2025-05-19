@@ -1,22 +1,23 @@
 import type { Meta, Preview } from "@storybook/react";
-import * as Form from "./Form.js";
+import * as Input from "../input/input.js";
+import * as Form from "./form-field.js";
 
 export default {
+  title: "Components/Form Field",
   component: Form.Field,
   argTypes: {
     children: {
-      // biome-ignore lint/suspicious/noExplicitAny: There is no proper way to hide it
-      control: "hidden" as any,
+      control: false,
     },
   },
 } satisfies Meta;
 
-export const FullExample = {
+export const WithInput = {
   args: {
     children: (
       <>
         <Form.Label htmlFor="my-input">Email</Form.Label>
-        <Form.Input id="my-input" />
+        <Input.Input id="my-input" />
       </>
     ),
   },

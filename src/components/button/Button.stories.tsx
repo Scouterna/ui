@@ -1,10 +1,10 @@
 import type { Meta } from "@storybook/react";
 import { fn } from "@storybook/test";
-import { Button } from "./Button.js";
+import { Button } from "./button.js";
 
 export default {
+  title: "Components/Button",
   component: Button,
-  // tags: ["autodocs"],
   args: {
     children: "Click me",
     onClick: fn(),
