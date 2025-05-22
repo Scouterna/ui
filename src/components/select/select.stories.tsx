@@ -9,22 +9,46 @@ export default {
       control: false,
     },
   },
+  decorators: [
+    (Story) => (
+      <div className="p-24 max-w-lg">
+        <Story />
+      </div>
+    ),
+  ],
 } satisfies Meta;
 
 export const Simple = {
   args: {
+    placeholder: "Select an option",
     children: (
       <>
-        <Select.Trigger>
-          <Select.Value placeholder="Select an option" />
-        </Select.Trigger>
-        <Select.Content>
-          <Select.Group>
-            <Select.Item value="option1">Option 1</Select.Item>
-            <Select.Item value="option2">Option 2</Select.Item>
-            <Select.Item value="option3">Option 3</Select.Item>
-          </Select.Group>
-        </Select.Content>
+        <Select.Item value="option1">Option 1</Select.Item>
+        <Select.Item value="option2">Option 2</Select.Item>
+        <Select.Item value="option3">Option 3</Select.Item>
+      </>
+    ),
+  },
+} satisfies Preview;
+
+export const WithGroups = {
+  args: {
+    placeholder: "Select an option",
+    children: (
+      <>
+        <Select.Group>
+          <Select.Label>Symmetriska knopar</Select.Label>
+          <Select.Item value="option1-1">Råbandsknop</Select.Item>
+          <Select.Item value="option1-2">Dubbelt halvslag</Select.Item>
+          <Select.Item value="option1-3">Trumpetstek</Select.Item>
+        </Select.Group>
+        <Select.Separator />
+        <Select.Group>
+          <Select.Label>Osymmetriska knopar</Select.Label>
+          <Select.Item value="option2-1">Skotstek</Select.Item>
+          <Select.Item value="option2-2">Smugglarstek</Select.Item>
+          <Select.Item value="option2-3">Tältlineknop</Select.Item>
+        </Select.Group>
       </>
     ),
   },

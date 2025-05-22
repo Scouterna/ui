@@ -8,30 +8,36 @@ import stories from './select.stories'
 The Select component is used to select a value from a list of options. It
 extends the [Radix Select component](https://www.radix-ui.com/primitives/docs/components/select).
 
-A basic Select component is comprised of the following parts:
-- `Select.Root`: An invisible wrapper in which all must live.
-- `Select.Trigger`: The button that opens the select menu.
-- `Select.Value`: The value that is displayed in the trigger.
-- `Select.Content`: The menu that opens when the trigger is clicked.
-- `Select.Item`: The individual items in the menu.
-
-Optionally you can also group items in the menu using:
-- `Select.SelectGroup`: A group of items in the menu.
-- `Select.Label`: A label for a group of items in the menu.
-
 Here is a basic example of a Select component:
 ```tsx
 import { Select } from '@scouterna/ui';
 
 <Select.Root>
-  <Select.Trigger>
-    <Select.Value placeholder="Select an option" />
-  </Select.Trigger>
-  <Select.Content>
-    <Select.Item value="option1">Option 1</Select.Item>
-    <Select.Item value="option2">Option 2</Select.Item>
-    <Select.Item value="option3">Option 3</Select.Item>
-  </Select.Content>
+  <Select.Item value="option1">Option 1</Select.Item>
+  <Select.Item value="option2">Option 2</Select.Item>
+  <Select.Item value="option3">Option 3</Select.Item>
+</Select.Root>
+```
+
+When creating groups, make sure to include a separator between the groups to
+visually separate the groups:
+```tsx
+import { Select } from '@scouterna/ui';
+
+<Select.Root>
+  <Select.Group>
+    <Select.Label>Symmetriska knopar</Select.Label>
+    <Select.Item value="option1-1">Råbandsknop</Select.Item>
+    <Select.Item value="option1-2">Dubbelt halvslag</Select.Item>
+    <Select.Item value="option1-3">Trumpetstek</Select.Item>
+  </Select.Group>
+  <Select.Separator />
+  <Select.Group>
+    <Select.Label>Osymmetriska knopar</Select.Label>
+    <Select.Item value="option2-1">Skotstek</Select.Item>
+    <Select.Item value="option2-2">Smugglarstek</Select.Item>
+    <Select.Item value="option2-3">Tältlineknop</Select.Item>
+  </Select.Group>
 </Select.Root>
 ```
 
