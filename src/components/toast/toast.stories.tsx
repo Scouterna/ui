@@ -13,35 +13,20 @@ export default {
         <Button
           type="button"
           onClick={() => {
-            toast({
-              title: "Toast Title",
+            const id = toast({
+              title: "User saved",
               description: "This is a toast description.",
               action: {
-                label: "Click me",
+                label: "Dismiss",
                 onClick: () => {
-                  console.log("Button clicked");
+                  dismiss(id);
                 },
               },
             });
           }}
         >
-          Toast
+          Show toast
         </Button>
-        {
-          void setTimeout(() => {
-            const id = toast({
-              title: "Toast Title",
-              description: "This is a toast description.",
-              action: {
-                label: "Dismiss",
-                onClick: () => {
-                  console.log("Button clicked");
-                  dismiss(id);
-                },
-              },
-            });
-          })
-        }
       </>
     ),
   ],
