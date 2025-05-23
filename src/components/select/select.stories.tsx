@@ -1,5 +1,6 @@
 import type { Meta, Preview } from "@storybook/react";
 import * as Select from "./select.js";
+import { fn } from "@storybook/test";
 
 export default {
   title: "Components/Select",
@@ -8,6 +9,9 @@ export default {
     children: {
       control: false,
     },
+  },
+  args: {
+    onValueChange: fn(),
   },
   decorators: [
     (Story) => (
@@ -49,6 +53,26 @@ export const WithGroups = {
           <Select.Item value="option2-2">Smugglarstek</Select.Item>
           <Select.Item value="option2-3">Tältlineknop</Select.Item>
         </Select.Group>
+      </>
+    ),
+  },
+} satisfies Preview;
+
+export const WithDisabledItems = {
+  args: {
+    placeholder: "Select an option",
+    children: (
+      <>
+        <Select.Item value="option1">Option 1</Select.Item>
+        <Select.Item value="option2">Option 2</Select.Item>
+        <Select.Item value="option3">Option 3</Select.Item>
+        <Select.Item value="option4" disabled>
+          Option 4
+        </Select.Item>
+        <Select.Item value="option5" disabled>
+          Option 5
+        </Select.Item>
+        <Select.Item value="option6">Option 6</Select.Item>
       </>
     ),
   },
