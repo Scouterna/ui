@@ -6,7 +6,11 @@ const config = {
     "../src/**/*.mdx",
     "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)",
   ],
-  addons: ["@storybook/addon-essentials", "@storybook/experimental-addon-test"],
+  addons: [
+    "@storybook/addon-essentials",
+    "@storybook/experimental-addon-test",
+    "@storybook/addon-a11y",
+  ],
   framework: {
     name: "@storybook/react-vite",
     options: {},
