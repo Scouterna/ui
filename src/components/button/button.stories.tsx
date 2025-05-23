@@ -33,3 +33,9 @@ export const Outlined = {
     variant: "outlined",
   },
 };
+
+export const Small = {
+  args: {
+    size: "small",
+  },
+};

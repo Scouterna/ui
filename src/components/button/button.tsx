@@ -8,10 +8,8 @@ import "../../style.css";
 const buttonVariants = cva(
   `
     flex items-center justify-center
-    px-4 h-10
-    rounded-lg cursor-pointer
+    cursor-pointer
     border border-transparent
-    text-base
     ring-offset-2
     leading-none font-sans font-medium
     disabled:opacity-40
@@ -132,13 +130,14 @@ const buttonVariants = cva(
         `,
       },
       size: {
-        default: "",
+        medium: "text-base px-4 h-10 rounded-lg",
+        small: "text-sm px-3 h-8 rounded-md",
       },
     },
     defaultVariants: {
       color: "blue",
       variant: "contained",
-      size: "default",
+      size: "medium",
     },
   },
 );
