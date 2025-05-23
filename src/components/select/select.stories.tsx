@@ -24,7 +24,7 @@ export default {
 
 export const Simple = {
   args: {
-    placeholder: "Select an option",
+    placeholder: "Välj ett alternativ",
     children: (
       <>
         <Select.Item value="option1">Option 1</Select.Item>
@@ -37,7 +37,7 @@ export const Simple = {
 
 export const WithGroups = {
   args: {
-    placeholder: "Select an option",
+    placeholder: "Välj ett alternativ",
     children: (
       <>
         <Select.Group>
@@ -60,7 +60,7 @@ export const WithGroups = {
 
 export const WithDisabledItems = {
   args: {
-    placeholder: "Select an option",
+    placeholder: "Välj ett alternativ",
     children: (
       <>
         <Select.Item value="option1">Option 1</Select.Item>

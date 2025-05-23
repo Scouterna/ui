@@ -11,8 +11,4 @@ export default {
   },
 } satisfies Meta;
 
-export const Simple = {
-  args: {
-    placeholder: "Enter text",
-  },
-} satisfies Preview;
+export const Simple = {} satisfies Preview;

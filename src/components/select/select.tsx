@@ -3,6 +3,8 @@ import { CheckIcon, ChevronDownIcon, ChevronUpIcon } from "lucide-react";
 import * as React from "react";
 import { cn } from "../../lib/utils.js";
 
+import "../../style.css";
+
 const Root = ({
   children,
   placeholder,
@@ -41,13 +43,13 @@ const Trigger = React.forwardRef<
         bg-gray-100
         text-base
         file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground
-        placeholder:text-muted-foreground
         focus-visible:outline-none
         focus-visible:border-gray-500
         disabled:cursor-not-allowed
         disabled:opacity-50
-        data-[placeholder]:text-gray-500
-        [&>span]:line-clamp-1
+        data-[placeholder]:text-gray-600
+        data-[placeholder]:italic
+        [&>span]:whitespace-nowrap
       `,
       className,
     )}
