@@ -20,7 +20,7 @@ function Toast(props: ToastProps) {
   const { title, description, action } = props;
 
   return (
-    <div className="flex rounded-lg bg-gray-100 shadow-lg border border-gray-200 w-full md:max-w-[364px] items-center py-3 px-4">
+    <div className="flex rounded-lg bg-gray-100 text-gray-dark shadow-lg border border-gray-200 w-full md:max-w-[364px] items-center py-3 px-4">
       <div className="flex flex-1 items-center">
         <div className="w-full">
           <p className="text-sm font-medium text-gray-900">{title}</p>

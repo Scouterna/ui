@@ -13,7 +13,7 @@ const Checkbox = forwardRef<
   id = id || autoId;
 
   return (
-    <div className="flex items-center">
+    <div className="flex items-center text-gray-dark">
       <CheckboxPrimitive.Root
         className={cn(
           `

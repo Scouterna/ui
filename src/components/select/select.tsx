@@ -16,7 +16,7 @@ const Root = ({
     <Trigger>
       <Value placeholder={placeholder} />
     </Trigger>
-    <Content>{children}</Content>
+    <Content className="text-gray-dark">{children}</Content>
   </SelectPrimitive.Root>
 );
 Root.displayName = SelectPrimitive.Root.displayName;
@@ -39,7 +39,7 @@ const Trigger = forwardRef<
         h-10 w-full px-3 py-2
         rounded-lg
         border border-gray-300
-        bg-gray-100
+        bg-gray-100 text-gray-dark
         text-base
         file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground
         focus-visible:outline-none

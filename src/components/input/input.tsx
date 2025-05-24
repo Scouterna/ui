@@ -22,7 +22,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             h-10 w-full px-3 py-2
             rounded-lg
             border border-gray-300
-            bg-gray-100
+            bg-gray-100 text-gray-dark
             text-base
             file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground
             focus-visible:outline-none
