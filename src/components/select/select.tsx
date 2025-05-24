@@ -1,6 +1,6 @@
 import * as SelectPrimitive from "@radix-ui/react-select";
 import { CheckIcon, ChevronDownIcon, ChevronUpIcon } from "lucide-react";
-import * as React from "react";
+import { forwardRef } from "react";
 import { cn } from "../../lib/utils.js";
 
 import "../../style.css";
@@ -8,7 +8,6 @@ import "../../style.css";
 const Root = ({
   children,
   placeholder,
-
   ...props
 }: React.ComponentPropsWithoutRef<typeof SelectPrimitive.Root> & {
   placeholder?: string;
@@ -26,7 +25,7 @@ const Group = SelectPrimitive.Group;
 
 const Value = SelectPrimitive.Value;
 
-const Trigger = React.forwardRef<
+const Trigger = forwardRef<
   React.ComponentRef<typeof SelectPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger>
 >(({ className, children, ...props }, ref) => (
@@ -57,13 +56,13 @@ const Trigger = React.forwardRef<
   >
     {children}
     <SelectPrimitive.Icon asChild>
-      <ChevronDownIcon className="h-4 w-4 opacity-50" />
+      <ChevronDownIcon className="size-4 opacity-50" />
     </SelectPrimitive.Icon>
   </SelectPrimitive.Trigger>
 ));
 Trigger.displayName = SelectPrimitive.Trigger.displayName;
 
-const ScrollUpButton = React.forwardRef<
+const ScrollUpButton = forwardRef<
   React.ComponentRef<typeof SelectPrimitive.ScrollUpButton>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.ScrollUpButton>
 >(({ className, ...props }, ref) => (
@@ -75,12 +74,12 @@ const ScrollUpButton = React.forwardRef<
     )}
     {...props}
   >
-    <ChevronUpIcon className="h-4 w-4" />
+    <ChevronUpIcon className="size-4" />
   </SelectPrimitive.ScrollUpButton>
 ));
 ScrollUpButton.displayName = SelectPrimitive.ScrollUpButton.displayName;
 
-const ScrollDownButton = React.forwardRef<
+const ScrollDownButton = forwardRef<
   React.ComponentRef<typeof SelectPrimitive.ScrollDownButton>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.ScrollDownButton>
 >(({ className, ...props }, ref) => (
@@ -92,12 +91,12 @@ const ScrollDownButton = React.forwardRef<
     )}
     {...props}
   >
-    <ChevronDownIcon className="h-4 w-4" />
+    <ChevronDownIcon className="size-4" />
   </SelectPrimitive.ScrollDownButton>
 ));
 ScrollDownButton.displayName = SelectPrimitive.ScrollDownButton.displayName;
 
-const Content = React.forwardRef<
+const Content = forwardRef<
   React.ComponentRef<typeof SelectPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Content>
 >(({ className, children, ...props }, ref) => (
@@ -120,7 +119,7 @@ const Content = React.forwardRef<
 ));
 Content.displayName = SelectPrimitive.Content.displayName;
 
-const Label = React.forwardRef<
+const Label = forwardRef<
   React.ComponentRef<typeof SelectPrimitive.Label>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Label>
 >(({ className, ...props }, ref) => (
@@ -135,7 +134,7 @@ const Label = React.forwardRef<
 ));
 Label.displayName = SelectPrimitive.Label.displayName;
 
-const Item = React.forwardRef<
+const Item = forwardRef<
   React.ComponentRef<typeof SelectPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item>
 >(({ className, children, ...props }, ref) => (
@@ -155,7 +154,7 @@ const Item = React.forwardRef<
 ));
 Item.displayName = SelectPrimitive.Item.displayName;
 
-const Separator = React.forwardRef<
+const Separator = forwardRef<
   React.ComponentRef<typeof SelectPrimitive.Separator>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Separator>
 >(({ className, ...props }, ref) => (
