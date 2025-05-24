@@ -1,3 +1,4 @@
+import * as LabelPrimitive from "@radix-ui/react-label";
 import { Slot } from "@radix-ui/react-slot";
 import { forwardRef } from "react";
 import { cn } from "../../lib/utils.js";
@@ -29,18 +30,18 @@ export type LabelProps = React.LabelHTMLAttributes<HTMLLabelElement> & {
   htmlFor: string;
 };
 
-const Label = forwardRef<HTMLLabelElement, LabelProps>(
-  ({ className, ...props }, ref) => {
-    return (
-      // biome-ignore lint/a11y/noLabelWithoutControl: It's there through the props
-      <label
-        className={cn("font-bold text-sm text-gray-dark")}
-        ref={ref}
-        {...props}
-      />
-    );
-  },
-);
-Label.displayName = "Label";
+const Label = forwardRef<
+  React.ComponentRef<typeof LabelPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root>
+>(({ className, ...props }, ref) => {
+  return (
+    <LabelPrimitive.Root
+      className={cn("font-bold text-sm text-gray-dark")}
+      ref={ref}
+      {...props}
+    />
+  );
+});
+Label.displayName = LabelPrimitive.Root.displayName;
 
 export { Field, Label };
