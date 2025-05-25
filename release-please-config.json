@@ -7,5 +7,6 @@
   "prerelease": false,
   "packages": {
     ".": {}
-  }
+  },
+  "initial-version": "0.0.0"
 }
