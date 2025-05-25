@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.1](https://github.com/Scouterna/ui/compare/ui-react-v0.0.0...ui-react-v0.0.1) (2025-05-25)
+
+
+### Bug Fixes
+
+* make package public ([56cfcc7](https://github.com/Scouterna/ui/commit/56cfcc7b7f0fdddc654251511cfea6fe480a7297))
+
 ## 0.0.0 (2025-05-25)
 
 
