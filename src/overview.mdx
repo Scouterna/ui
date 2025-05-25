@@ -13,3 +13,21 @@ This UI library intentionally deviates from Scouternas graphical profile and
 expands on it to better suit the needs of application interfaces.
 
 The source code can be found on [GitHub](https://github.com/scouterna/ui).
+
+## Styling
+
+To use the provided styles yourself, setup your Tailwind CSS like this:
+
+```css
+// Import Tailwind CSS
+@import "tailwindcss";
+// Import the Scouterna UI theme
+@import "@scouterna/ui-react/theme.css";
+
+// Set base text color to make your own text coherent with the theme
+@layer base {
+  html {
+    @apply text-gray-dark;
+  }
+}
+```

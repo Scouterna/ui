@@ -1,9 +1,2 @@
 @import "tailwindcss";
 @import "./theme.css";
-
-/* We should recommend the consumer to do this and not do it ourselves. We don't mess with their global styles. */
-/* @layer base {
-  html {
-    @apply text-gray-dark;
-  }
-} */
