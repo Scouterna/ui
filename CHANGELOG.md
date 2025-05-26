@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.2](https://github.com/Scouterna/ui/compare/ui-react-v0.0.1...ui-react-v0.0.2) (2025-05-26)
+
+
+### Bug Fixes
+
+* add repository to package.json ([dcee530](https://github.com/Scouterna/ui/commit/dcee5300ca958ac155bef169c946dd95b9b92dd7))
+
 ## [0.0.1](https://github.com/Scouterna/ui/compare/ui-react-v0.0.0...ui-react-v0.0.1) (2025-05-25)
 
 
