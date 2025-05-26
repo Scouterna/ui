@@ -12,7 +12,8 @@
   },
   "types": "./dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "assets"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
