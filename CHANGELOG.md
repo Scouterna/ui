@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.0](https://github.com/Scouterna/ui/compare/ui-react-v0.0.2...ui-react-v0.1.0) (2025-05-26)
+
+
+### Features
+
+* add assets ([3f40116](https://github.com/Scouterna/ui/commit/3f401162a610efed6414c7b13d2002f3ac264a5b))
+
 ## [0.0.2](https://github.com/Scouterna/ui/compare/ui-react-v0.0.1...ui-react-v0.0.2) (2025-05-26)
 
 
