@@ -24,6 +24,11 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - run: pnpm install
 
-      - run: pnpm run build
-      
-      - run: npm publish --provenance --access public
+      # pnpm will run scripts in topological order, ensuring that dependencies
+      # are built before dependents. This will also build packages that are
+      # irrelevant to the current release, but that's fine.
+      - run: pnpm run --recursive build
+
+      - if: startsWith(github.event.release.tag_name, 'ui-react-v')
+        working-directory: packages/ui-react
+        run: npm publish --provenance --access public

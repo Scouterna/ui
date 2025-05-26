@@ -6,7 +6,8 @@
   "draft": false,
   "prerelease": false,
   "packages": {
-    ".": {}
-  },
-  "initial-version": "0.0.0"
+    "pacakges/ui-react": {
+      "initial-version": "0.0.2"
+    }
+  }
 }
