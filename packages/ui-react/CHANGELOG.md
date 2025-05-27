@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.4](https://github.com/Scouterna/ui/compare/ui-react-v0.0.3...ui-react-v0.0.4) (2025-05-27)
+
+
+### Bug Fixes
+
+* compile tailwind as well ([300638b](https://github.com/Scouterna/ui/commit/300638b4548e81dd59ce7bdcfb7b134cf0b46d04))
+
 ## [0.0.3](https://github.com/Scouterna/ui/compare/ui-react-v0.0.2...ui-react-v0.0.3) (2025-05-27)
 
 
