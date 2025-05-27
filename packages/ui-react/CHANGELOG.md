@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.3](https://github.com/Scouterna/ui/compare/ui-react-v0.0.2...ui-react-v0.0.3) (2025-05-27)
+
+
+### Bug Fixes
+
+* trigger release ([cef0a2b](https://github.com/Scouterna/ui/commit/cef0a2b9e3d3df8f863d8049a60f4cb2cc0f8ad4))
+
 ## [0.0.2](https://github.com/Scouterna/ui/compare/ui-react-v0.0.1...ui-react-v0.0.2) (2025-05-26)
 
 
