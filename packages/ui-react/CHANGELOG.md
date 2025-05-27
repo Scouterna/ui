@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.5](https://github.com/Scouterna/ui/compare/ui-react-v0.0.4...ui-react-v0.0.5) (2025-05-27)
+
+
+### Bug Fixes
+
+* allow importing all files ([5cc4ab1](https://github.com/Scouterna/ui/commit/5cc4ab10f8db1af449ec0c47d1abc487abe83e84))
+
 ## [0.0.4](https://github.com/Scouterna/ui/compare/ui-react-v0.0.3...ui-react-v0.0.4) (2025-05-27)
 
 
