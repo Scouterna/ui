@@ -20,8 +20,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006 --no-open",
     "build-storybook": "storybook build",
-    "build": "pnpm run build:tsc && pnpm run build:copy",
+    "build": "pnpm run build:tsc && pnpm run build:tailwind && pnpm run build:copy",
     "build:tsc": "tsc -p tsconfig.library.json",
+    "build:tailwind": "tailwindcss -i ./src/style.css -o ./dist/style.css",
     "build:copy": "copyfiles -u 1 src/theme.css dist"
   },
   "keywords": [],
