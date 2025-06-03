@@ -3,8 +3,6 @@ import { type VariantProps, cva } from "class-variance-authority";
 import { forwardRef } from "react";
 import { cn } from "../../lib/utils.js";
 
-import "../../style.css";
-
 const buttonVariants = cva(
   `
     flex items-center justify-center

@@ -3,8 +3,6 @@ import { CheckIcon } from "lucide-react";
 import { forwardRef, useId } from "react";
 import { cn } from "../../lib/utils.js";
 
-import "../../style.css";
-
 const Checkbox = forwardRef<
   React.ComponentRef<typeof CheckboxPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
