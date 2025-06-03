@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.6](https://github.com/Scouterna/ui/compare/ui-react-v0.0.5...ui-react-v0.0.6) (2025-06-03)
+
+
+### Bug Fixes
+
+* don't auto import css ([7759b87](https://github.com/Scouterna/ui/commit/7759b871c089f1bb94e6979df5ffc546b49bb175))
+
 ## [0.0.5](https://github.com/Scouterna/ui/compare/ui-react-v0.0.4...ui-react-v0.0.5) (2025-05-27)
 
 
