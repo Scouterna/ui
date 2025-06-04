@@ -17,7 +17,7 @@ const Field = forwardRef<HTMLDivElement, FieldProps>(
     const Comp = asChild ? Slot : "div";
 
     return (
-      <Comp className={cn("")} ref={ref} {...props}>
+      <Comp className={cn("", className)} ref={ref} {...props}>
         {children}
       </Comp>
     );

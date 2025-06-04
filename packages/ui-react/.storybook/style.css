@@ -1,0 +1,9 @@
+@import "tailwindcss/preflight.css" layer(base);
+@import "../src/theme.css";
+
+@layer base {
+  html {
+    /* @apply text-gray-dark; */
+    @apply text-red;
+  }
+}
