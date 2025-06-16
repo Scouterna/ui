@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.0](https://github.com/Scouterna/ui/compare/ui-react-v0.0.6...ui-react-v0.1.0) (2025-06-16)
+
+
+### Features
+
+* add callout component ([01340e5](https://github.com/Scouterna/ui/commit/01340e5158e6afc5c828b24d22c2cc5c15b8e649))
+
 ## [0.0.6](https://github.com/Scouterna/ui/compare/ui-react-v0.0.5...ui-react-v0.0.6) (2025-06-03)
 
 
