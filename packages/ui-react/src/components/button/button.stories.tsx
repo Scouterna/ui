@@ -39,3 +39,12 @@ export const Small = {
     size: "small",
   },
 };
+
+export const Link = {
+  args: {
+    render: (
+      <a href="https://github.com" target="_blank" rel="noopener noreferrer" />
+    ),
+    children: "Go to GitHub",
+  },
+};
