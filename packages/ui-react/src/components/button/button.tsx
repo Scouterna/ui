@@ -1,6 +1,5 @@
-import { Slot } from "@radix-ui/react-slot";
-import { type VariantProps, cva } from "class-variance-authority";
-import { forwardRef } from "react";
+import { mergeProps, useRender } from "@base-ui-components/react";
+import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "../../lib/utils.js";
 
 const buttonVariants = cva(
@@ -140,33 +139,29 @@ const buttonVariants = cva(
   },
 );
 
-export type ButtonProps = Omit<
-  React.ButtonHTMLAttributes<HTMLButtonElement>,
-  "color"
-> &
-  VariantProps<typeof buttonVariants> & {
-    asChild?: boolean;
+export type ButtonProps = Omit<useRender.ComponentProps<"button">, "color"> &
+  VariantProps<typeof buttonVariants>;
+
+const Button = (props: ButtonProps) => {
+  const {
+    // biome-ignore lint/a11y/useButtonType: We set it further down
+    render = <button />,
+    className,
+    color,
+    variant,
+    size,
+    ...otherProps
+  } = props;
+
+  const defaultProps: useRender.ElementProps<"button"> = {
+    className: cn(buttonVariants({ color, variant, size, className })),
+    type: "button",
   };
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  (
-    { className, color, variant, size, children, asChild = false, ...props },
-    ref,
-  ) => {
-    const Comp = asChild ? Slot : "button";
-    return (
-      <Comp
-        className={cn(buttonVariants({ color, variant, size, className }))}
-        ref={ref}
-        {...props}
-      >
-        {/* <span> */}
-        {children}
-        {/* </span> */}
-      </Comp>
-    );
-  },
-);
-Button.displayName = "Button";
+  return useRender({
+    render,
+    props: mergeProps(defaultProps, otherProps),
+  });
+};
 
 export { Button };
