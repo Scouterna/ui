@@ -3,7 +3,7 @@
 
 @layer base {
   html {
-    /* @apply text-gray-dark; */
-    @apply text-red;
+    /* Use a bold color to clearly show cases where we've forgotten to set text color. */
+    color: #ff00ff;
   }
 }
