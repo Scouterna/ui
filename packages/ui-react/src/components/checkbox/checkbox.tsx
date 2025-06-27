@@ -1,17 +1,13 @@
-import * as CheckboxPrimitive from "@radix-ui/react-checkbox";
+import { Checkbox as CheckboxPrimitive } from "@base-ui-components/react/checkbox";
 import { CheckIcon } from "lucide-react";
-import { forwardRef, useId } from "react";
 import { cn } from "../../lib/utils.js";
 
-const Checkbox = forwardRef<
-  React.ComponentRef<typeof CheckboxPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
->(({ className, id, children, ...props }, ref) => {
-  const autoId = useId();
-  id = id || autoId;
+export type CheckboxProps = CheckboxPrimitive.Root.Props;
 
+const Checkbox = ({ className, children, ...props }: CheckboxProps) => {
   return (
-    <div className="flex items-center text-gray-dark">
+    // biome-ignore lint/a11y/noLabelWithoutControl: The CheckboxPrimitive.Root is the control
+    <label className="flex items-center text-gray-dark">
       <CheckboxPrimitive.Root
         className={cn(
           `
@@ -28,19 +24,15 @@ const Checkbox = forwardRef<
           `,
           className,
         )}
-        id={id}
         {...props}
       >
         <CheckboxPrimitive.Indicator>
           <CheckIcon className="size-5" />
         </CheckboxPrimitive.Indicator>
       </CheckboxPrimitive.Root>
-      <label className="pl-2 text-sm leading-none" htmlFor={id}>
-        {children}
-      </label>
-    </div>
+      <span className="pl-2 text-sm leading-none">{children}</span>
+    </label>
   );
-});
-Checkbox.displayName = CheckboxPrimitive.Root.displayName;
+};
 
 export { Checkbox };
