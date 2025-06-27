@@ -1,6 +1,6 @@
 import type { Meta, Preview } from "@storybook/react";
-import * as Select from "./select.js";
 import { fn } from "@storybook/test";
+import * as Select from "./select.js";
 
 export default {
   title: "Components/Select",
@@ -41,14 +41,14 @@ export const WithGroups = {
     children: (
       <>
         <Select.Group>
-          <Select.Label>Symmetriska knopar</Select.Label>
+          <Select.GroupLabel>Symmetriska knopar</Select.GroupLabel>
           <Select.Item value="option1-1">Råbandsknop</Select.Item>
           <Select.Item value="option1-2">Dubbelt halvslag</Select.Item>
           <Select.Item value="option1-3">Trumpetstek</Select.Item>
         </Select.Group>
         <Select.Separator />
         <Select.Group>
-          <Select.Label>Osymmetriska knopar</Select.Label>
+          <Select.GroupLabel>Osymmetriska knopar</Select.GroupLabel>
           <Select.Item value="option2-1">Skotstek</Select.Item>
           <Select.Item value="option2-2">Smugglarstek</Select.Item>
           <Select.Item value="option2-3">Tältlineknop</Select.Item>
