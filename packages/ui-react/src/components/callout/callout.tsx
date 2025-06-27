@@ -1,5 +1,4 @@
-import { Slot } from "@radix-ui/react-slot";
-import { type VariantProps, cva } from "class-variance-authority";
+import { cva, type VariantProps } from "class-variance-authority";
 import {
   CheckIcon,
   CircleAlertIcon,
@@ -7,7 +6,7 @@ import {
   type LucideIcon,
   TriangleAlertIcon,
 } from "lucide-react";
-import { forwardRef } from "react";
+
 import { cn } from "../../lib/utils.js";
 
 const calloutVariants = cva(
@@ -61,31 +60,21 @@ const variantIcons: Record<Variants, LucideIcon> = {
 
 export type CalloutProps = React.HTMLAttributes<HTMLDivElement> &
   VariantProps<typeof calloutVariants> & {
-    asChild?: boolean;
     icon?: LucideIcon;
   };
 
-const Callout = forwardRef<HTMLDivElement, CalloutProps>(
-  ({ className, asChild = false, variant, children, ...props }, ref) => {
-    const Comp = asChild ? Slot : "div";
+const Callout = ({ className, variant, children, ...props }: CalloutProps) => {
+  variant = variant || "default";
+  const Icon = props.icon || variantIcons[variant];
 
-    variant = variant || "default";
-    const Icon = props.icon || variantIcons[variant];
-
-    return (
-      <Comp
-        className={cn(calloutVariants({ variant, className }))}
-        ref={ref}
-        {...props}
-      >
-        <div>
-          <Icon className="h-6 w-6 text-(--callout-icon-color)" />
-        </div>
-        {children}
-      </Comp>
-    );
-  },
-);
-Callout.displayName = "Callout";
+  return (
+    <div className={cn(calloutVariants({ variant, className }))} {...props}>
+      <div>
+        <Icon className="h-6 w-6 text-(--callout-icon-color)" />
+      </div>
+      {children}
+    </div>
+  );
+};
 
 export { Callout };
