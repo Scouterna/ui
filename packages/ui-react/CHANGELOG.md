@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.1.0](https://github.com/Scouterna/ui/compare/ui-react-v0.0.6...ui-react-v0.1.0) (2025-06-27)
+
+
+### Features
+
+* add callout component ([01340e5](https://github.com/Scouterna/ui/commit/01340e5158e6afc5c828b24d22c2cc5c15b8e649))
+
+
+### Bug Fixes
+
+* migrate button to base-ui ([0585d83](https://github.com/Scouterna/ui/commit/0585d83aa1328185a19d2294128af25167e52da0))
+* migrate checkbox to base-ui ([a1c6d82](https://github.com/Scouterna/ui/commit/a1c6d82655188bb86a58873f49a5f44ab72c7eaf))
+* migrate input and field to base-ui ([97c94f2](https://github.com/Scouterna/ui/commit/97c94f216b39909a24e6c49bcbb1f5c80e2a2af4))
+* migrate select to base-ui ([6e7b7e5](https://github.com/Scouterna/ui/commit/6e7b7e5a9616a38515e0a64faf2406225e42a111))
+* remove forwardRef from callout ([2409e81](https://github.com/Scouterna/ui/commit/2409e8105376802c9fb73e196fab240dc7000223))
+
 ## [0.0.6](https://github.com/Scouterna/ui/compare/ui-react-v0.0.5...ui-react-v0.0.6) (2025-06-03)
 
 
