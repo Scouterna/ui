@@ -1,4 +1,4 @@
-# Copilot Instructions for j26-components
+# Copilot Instructions for Scouterna UI (`Scouterna/ui`)
 
 ## Repository Overview
 

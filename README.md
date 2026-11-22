@@ -21,7 +21,7 @@ pnpm dev
 ## Project Structure
 
 ```
-j26-web-components/
+ui/
 ├── packages/
 │   ├── design-tokens/    # Design tokens (CSS variables and more)
 │   ├── ui-webc/          # Stencil Web Components
