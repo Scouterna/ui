@@ -22,7 +22,6 @@ import { parameters } from "../node_modules/@stencil/storybook-plugin/dist/entry
 
 // Include styles to have our web components render correctly
 import "@scouterna/ui-webc/style.css";
-import "@fontsource-variable/source-sans-3/index.css";
 
 // Register the custom elements manifest for Stencil integration
 setCustomElementsManifest(customElements);
