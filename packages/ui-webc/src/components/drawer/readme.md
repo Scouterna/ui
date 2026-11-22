@@ -25,6 +25,13 @@
 | `exitButtonClicked` | Fired when clicking backButton (X). Also sent when clicking the backdrop. | `CustomEvent<void>` |
 
 
+## Slots
+
+| Slot | Description      |
+| ---- | ---------------- |
+|      | The default slot |
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

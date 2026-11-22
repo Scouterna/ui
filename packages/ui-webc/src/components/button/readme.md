@@ -35,6 +35,13 @@ Will render a `<button>` element when the `type` is set to "button",
 | `scoutClick` |             | `CustomEvent<void>` |
 
 
+## Slots
+
+| Slot | Description      |
+| ---- | ---------------- |
+|      | The default slot |
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

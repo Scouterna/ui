@@ -27,6 +27,13 @@ handled programmatically for now.
 | `scoutChange` | Emitted when the active tab changes as a result of a user click. The `value` in the event detail is the zero-based index of the newly selected tab. | `CustomEvent<{ value: number; }>` |
 
 
+## Slots
+
+| Slot | Description      |
+| ---- | ---------------- |
+|      | The default slot |
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

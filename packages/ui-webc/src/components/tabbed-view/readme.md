@@ -21,6 +21,13 @@
 | `scoutSwipeProgress` | Emitted continuously during a swipe with a fractional panel index, suitable for driving the `swipe-value` prop on `scout-tabs`. | `CustomEvent<{ swipeValue: number; }>` |
 
 
+## Slots
+
+| Slot | Description      |
+| ---- | ---------------- |
+|      | The default slot |
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

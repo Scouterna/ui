@@ -17,6 +17,13 @@ input components and displays error messages accordingly.
 | `label` _(required)_ | `label`     | Label shown above the field.     | `string` | `undefined` |
 
 
+## Slots
+
+| Slot | Description      |
+| ---- | ---------------- |
+|      | The default slot |
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

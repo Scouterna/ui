@@ -28,6 +28,14 @@ Use the `actions` slot to add `scout-button` elements.
 | `scoutDismiss` | Fired when the dismiss button is clicked. | `CustomEvent<void>` |
 
 
+## Slots
+
+| Slot        | Description      |
+| ----------- | ---------------- |
+|             | The default slot |
+| `"actions"` |                  |
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

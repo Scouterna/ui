@@ -27,6 +27,10 @@
       "import": "./dist/ui-webc/ui-webc.css",
       "require": "./dist/ui-webc/ui-webc.css"
     },
+    "./dist/components": {
+      "import": "./dist/components/index.js",
+      "types": "./dist/components/index.d.ts"
+    },
     "./dist/*": {
       "import": "./dist/*",
       "types": "./dist/*"
@@ -51,23 +55,23 @@
   },
   "dependencies": {
     "@scouterna/design-tokens": "workspace:^",
-    "@stencil/react-output-target": "^1.2.0",
-    "@tabler/icons": "^3.36.1",
+    "@stencil/react-output-target": "^1.8.1",
+    "@tabler/icons": "^3.52.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "dom-focus-lock": "^1.1.0",
-    "iconoir": "^7.11.0"
+    "iconoir": "^7.12.2"
   },
   "devDependencies": {
     "@stencil-community/postcss": "^2.2.0",
-    "@stencil/core": "^4.41.1",
+    "@stencil/core": "^4.45.5",
     "@types/jest": "^30.0.0",
-    "@types/node": "^24.10.1",
-    "jest": "^30.2.0",
-    "jest-cli": "^30.2.0",
-    "postcss-import": "^16.1.1",
-    "postcss-preset-env": "^10.6.0",
-    "puppeteer": "^24.34.0"
+    "@types/node": "^26.6.6",
+    "jest": "^30.5.2",
+    "jest-cli": "^30.5.2",
+    "postcss-import": "^17.0.1",
+    "postcss-preset-env": "^11.6.3",
+    "puppeteer": "^25.18.1"
   },
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js"

@@ -11,6 +11,13 @@
 | `gapSize`   | `gap-size`  | Gap size. If more sizes are needed, we can expand. | `"l" \| "m" \| "s" \| "xl" \| "xs" \| "xxl"` | `"m"`   |
 
 
+## Slots
+
+| Slot | Description      |
+| ---- | ---------------- |
+|      | The default slot |
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

@@ -16,6 +16,14 @@ native-like navigation experience.
 | `titleText` | `title-text` |             | `string` | `undefined` |
 
 
+## Slots
+
+| Slot       | Description |
+| ---------- | ----------- |
+| `"prefix"` |             |
+| `"suffix"` |             |
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*
