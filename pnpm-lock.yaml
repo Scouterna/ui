@@ -4634,8 +4634,8 @@ packages:
     peerDependencies:
       postcss: ^8.5.26
 
-  postcss-combine-duplicated-selectors@git+https://git@github.com:poimen/postcss-combine-duplicated-selectors.git#690c03192aa5c61b674ff9e7b8e6016edb56df53:
-    resolution: {commit: 690c03192aa5c61b674ff9e7b8e6016edb56df53, repo: git@github.com:poimen/postcss-combine-duplicated-selectors.git, type: git}
+  postcss-combine-duplicated-selectors@https://codeload.github.com/poimen/postcss-combine-duplicated-selectors/tar.gz/bdf9223342b6b1da8a91d6727b6e4cf719f7def7:
+    resolution: {tarball: https://codeload.github.com/poimen/postcss-combine-duplicated-selectors/tar.gz/bdf9223342b6b1da8a91d6727b6e4cf719f7def7}
     version: 10.0.3
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     peerDependencies:
@@ -10202,7 +10202,7 @@ snapshots:
       postcss: 8.5.33
       postcss-value-parser: 4.2.0
 
-  postcss-combine-duplicated-selectors@git+https://git@github.com:poimen/postcss-combine-duplicated-selectors.git#690c03192aa5c61b674ff9e7b8e6016edb56df53(postcss@8.5.33):
+  postcss-combine-duplicated-selectors@https://codeload.github.com/poimen/postcss-combine-duplicated-selectors/tar.gz/bdf9223342b6b1da8a91d6727b6e4cf719f7def7(postcss@8.5.33):
     dependencies:
       postcss: 8.5.33
       postcss-selector-parser: 7.2.1
@@ -10860,7 +10860,7 @@ snapshots:
       fs-extra: 11.4.1
       p-queue: 6.6.2
       postcss: 8.5.33
-      postcss-combine-duplicated-selectors: git+https://git@github.com:poimen/postcss-combine-duplicated-selectors.git#690c03192aa5c61b674ff9e7b8e6016edb56df53(postcss@8.5.33)
+      postcss-combine-duplicated-selectors: https://codeload.github.com/poimen/postcss-combine-duplicated-selectors/tar.gz/bdf9223342b6b1da8a91d6727b6e4cf719f7def7(postcss@8.5.33)
       postcss-combine-media-query: 2.1.0(postcss@8.5.33)
       postcss-discard-comments: 8.0.4(postcss@8.5.33)
       postcss-load-config: 6.0.1(jiti@2.7.0)(postcss@8.5.33)(yaml@2.9.1)
