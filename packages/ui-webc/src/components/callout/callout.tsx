@@ -61,7 +61,7 @@ export class ScoutCallout {
 
   render() {
     return (
-      <Host data-variant={this.variant}>
+      <Host class={`variant-${this.variant}`}>
         <div class="callout">
           <div
             class="icon"

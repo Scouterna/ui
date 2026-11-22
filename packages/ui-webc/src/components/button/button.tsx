@@ -73,11 +73,11 @@ export class ScoutButton {
 
     return (
       <Host
-        // Using data- attributes instead of classes because React fights and
-        // removes them sometimes. Hopefully we can find a proper fix later.
-        data-size={this.size}
-        data-icon-only={this.iconOnly}
-        data-loading={this.loading}
+        class={{
+          "size-large": this.size === "large",
+          "icon-only": !!this.iconOnly,
+          loading: !!this.loading,
+        }}
       >
         <Tag
           class={`button ${this.variant}`}

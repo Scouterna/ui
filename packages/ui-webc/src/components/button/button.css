@@ -9,7 +9,7 @@ scout-button {
   height: var(--spacing-11);
   font: var(--type-body-base);
 
-  &[data-size="large"] {
+  &.size-large {
     height: var(--spacing-14);
     font: var(--type-body-lg);
   }
@@ -31,7 +31,7 @@ scout-button {
     box-sizing: border-box;
   }
 
-  &[data-size="large"] .button {
+  &.size-large .button {
     padding: 0 var(--spacing-5);
   }
 
@@ -59,27 +59,27 @@ scout-button {
     opacity: 0;
   }
 
-  &[data-loading] .spinner {
+  &.loading .spinner {
     opacity: 1;
     animation: scout-button-spin 0.75s linear infinite;
   }
 
-  &[data-loading] .icon,
-  &[data-loading] .content {
+  &.loading .icon,
+  &.loading .content {
     opacity: 0;
   }
 
-  &[data-icon-only] .button {
+  &.icon-only .button {
     aspect-ratio: 1 / 1;
     justify-content: center;
     padding: 0;
   }
 
-  &[data-icon-only] .icon {
+  &.icon-only .icon {
     margin: 0;
   }
 
-  &[data-icon-only] .content {
+  &.icon-only .content {
     /* Visually hidden: https://www.a11yproject.com/posts/how-to-hide-content/ */
     clip: rect(0 0 0 0);
     clip-path: inset(50%);

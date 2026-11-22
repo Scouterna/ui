@@ -3,27 +3,27 @@
   --callout-color: var(--color-neutral-600);
 }
 
-:host([data-variant="info"]) {
+:host(.variant-info) {
   --callout-color: var(--color-neutral-600);
 }
 
-:host([data-variant="tip"]) {
+:host(.variant-tip) {
   --callout-color: var(--color-blue-500);
 }
 
-:host([data-variant="success"]) {
+:host(.variant-success) {
   --callout-color: var(--color-trackergreen-500);
 }
 
-:host([data-variant="warning"]) {
+:host(.variant-warning) {
   --callout-color: var(--color-orange-600);
 }
 
-:host([data-variant="error"]) {
+:host(.variant-error) {
   --callout-color: var(--color-challengerpink-600);
 }
 
-:host([data-variant="announcement"]) {
+:host(.variant-announcement) {
   --callout-color: var(--color-blue-700);
 }
 
