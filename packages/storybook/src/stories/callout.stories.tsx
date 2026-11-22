@@ -100,25 +100,25 @@ export const WithActions = meta.story({
     >
       <ScoutCallout variant="info" heading="Komplettera din profil">
         Lägg till bild och kontaktuppgifter så hittar din grupp dig snabbare.
-        <ScoutButton slot="actions" variant="primary">
+        <ScoutButton slot="actions" kind="primary">
           Till profilen
         </ScoutButton>
       </ScoutCallout>
       <ScoutCallout variant="error" heading="Kunde inte uppdatera">
         Kontrollera din uppkoppling och försök igen.
-        <ScoutButton slot="actions" variant="danger">
+        <ScoutButton slot="actions" kind="primary" tone="destructive">
           Försök igen
         </ScoutButton>
-        <ScoutButton slot="actions" variant="text">
+        <ScoutButton slot="actions" kind="tertiary">
           Avbryt
         </ScoutButton>
       </ScoutCallout>
       <ScoutCallout variant="warning" dismissible heading="Platsåtkomst krävs">
         Utan platsåtkomst kan vi inte visa aktiviteter i din närhet.
-        <ScoutButton slot="actions" variant="caution">
+        <ScoutButton slot="actions" kind="primary">
           Aktivera
         </ScoutButton>
-        <ScoutButton slot="actions" variant="text">
+        <ScoutButton slot="actions" kind="tertiary">
           Inte nu
         </ScoutButton>
       </ScoutCallout>

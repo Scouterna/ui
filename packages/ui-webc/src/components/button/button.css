@@ -5,40 +5,254 @@
 }
 
 scout-button {
-  display: inline-block;
-  height: var(--spacing-11);
-  font: var(--type-body-base);
+  /* Size: small 32px, medium 40px (default), large 48px. */
+  --_height: var(--size-control-md);
+  --_px: var(--spacing-4);
+  --_gap: var(--spacing-2);
+  --_icon: var(--size-icon-md);
+  --_tip: 12px;
 
-  &.size-large {
-    height: var(--spacing-14);
-    font: var(--type-body-lg);
+  display: inline-block;
+  height: var(--_height);
+  font: var(--typography-label-md);
+
+  &.size-sm {
+    --_height: var(--size-control-sm);
+    --_px: var(--spacing-3);
+    --_gap: var(--spacing-1);
+    --_icon: var(--size-icon-sm);
+    --_tip: 10px;
+  }
+
+  &.size-lg {
+    --_height: var(--size-control-lg);
+    --_px: var(--spacing-6);
+    --_tip: 14px;
+    font: var(--typography-label-lg);
   }
 
   .button {
+    /* Colors are set per tone and kind below. */
+    --_solid: var(--color-action-default-solid);
+    --_solid-hover: var(--color-action-default-solid-hover);
+    --_solid-pressed: var(--color-action-default-solid-pressed);
+    --_on-solid: var(--color-action-default-on-solid);
+    --_text: var(--color-action-default-text);
+    --_subtle-hover: var(--color-action-default-subtle-hover);
+    --_subtle-pressed: var(--color-action-default-subtle-pressed);
+    --_focus: var(--color-border-focus);
+    --_surface: var(--color-bg-surface);
+
+    /* The current fill, outline and label color. States only change these. */
+    --_bg: transparent;
+    --_outline: transparent;
+    --_color: var(--_text);
+
     position: relative;
-    flex: 1;
+    isolation: isolate;
     display: inline-flex;
     width: 100%;
     height: 100%;
     align-items: center;
     justify-content: center;
-    gap: var(--spacing-3);
-    padding: 0 var(--spacing-4);
-    border-radius: 0.875rem;
-    border: 1px solid transparent;
+    gap: var(--_gap);
+    padding: 0 var(--_px);
+    border: 0;
+    border-radius: var(--radius-md);
+    background-color: var(--_bg);
+    color: var(--_color);
+    font: inherit;
     cursor: pointer;
     text-decoration: none;
     box-sizing: border-box;
+    white-space: nowrap;
+
+    &:focus-visible {
+      outline: var(--border-width-md) solid var(--_focus);
+      outline-offset: 2px;
+    }
   }
 
-  &.size-large .button {
-    padding: 0 var(--spacing-5);
+  /* Tones */
+  .button.tone-inverse {
+    --_solid: var(--color-action-inverse-solid);
+    --_solid-hover: var(--color-action-inverse-solid-hover);
+    --_solid-pressed: var(--color-action-inverse-solid-pressed);
+    --_on-solid: var(--color-action-inverse-on-solid);
+    --_text: var(--color-action-inverse-text);
+    --_subtle-hover: var(--color-action-inverse-subtle-hover);
+    --_subtle-pressed: var(--color-action-inverse-subtle-pressed);
+    --_focus: var(--color-border-focus-inverse);
+    --_surface: var(--color-bg-inverse);
   }
 
+  .button.tone-destructive {
+    --_solid: var(--color-action-destructive-solid);
+    --_solid-hover: var(--color-action-destructive-solid-hover);
+    --_solid-pressed: var(--color-action-destructive-solid-pressed);
+    --_on-solid: var(--color-action-destructive-on-solid);
+    --_text: var(--color-action-destructive-text);
+    --_subtle-hover: var(--color-action-destructive-subtle-hover);
+    --_subtle-pressed: var(--color-action-destructive-subtle-pressed);
+  }
+
+  /* Kinds */
+  .button.kind-primary {
+    --_bg: var(--_solid);
+    --_color: var(--_on-solid);
+
+    @media (hover: hover) {
+      &:hover:not(:disabled, [aria-disabled="true"]) {
+        --_bg: var(--_solid-hover);
+      }
+    }
+
+    &:active:not(:disabled, [aria-disabled="true"]) {
+      --_bg: var(--_solid-pressed);
+    }
+  }
+
+  .button.kind-secondary {
+    --_outline: var(--_text);
+
+    @media (hover: hover) {
+      &:hover:not(:disabled, [aria-disabled="true"]) {
+        --_bg: var(--_subtle-hover);
+      }
+    }
+
+    &:active:not(:disabled, [aria-disabled="true"]) {
+      --_bg: var(--_subtle-pressed);
+    }
+  }
+
+  .button.kind-tertiary {
+    @media (hover: hover) {
+      &:hover:not(:disabled, [aria-disabled="true"]) {
+        --_bg: var(--_subtle-hover);
+      }
+    }
+
+    &:active:not(:disabled, [aria-disabled="true"]) {
+      --_bg: var(--_subtle-pressed);
+    }
+  }
+
+  /* Secondary uses a 1px outline. Shaped buttons draw it on the shape layers instead. */
+  .button.kind-secondary.shape-default {
+    box-shadow: inset 0 0 0 var(--border-width-sm) var(--_outline);
+  }
+
+  /* Disabled looks the same for every tone. */
+  .button:disabled,
+  .button[aria-disabled="true"] {
+    --_color: var(--color-action-disabled-text);
+    cursor: not-allowed;
+  }
+
+  .button.kind-primary:disabled,
+  .button.kind-primary[aria-disabled="true"] {
+    --_bg: var(--color-action-disabled-solid);
+  }
+
+  .button.kind-secondary:disabled,
+  .button.kind-secondary[aria-disabled="true"] {
+    --_outline: var(--color-action-disabled-solid);
+  }
+
+  /*
+   * Shapes. The button itself stays a normal box so the focus ring does not
+   * follow the shape. The cut and arrow shapes are drawn on pseudo-elements
+   * behind the label. The arrow tip has a fixed depth and never stretches.
+   */
+  .button.shape-cut,
+  .button.shape-arrow {
+    --_shape: polygon(
+      3px 0,
+      calc(100% - 3px) 0,
+      100% calc(100% - 3px),
+      calc(100% - 3px) 100%,
+      0 100%,
+      0 3px
+    );
+    --_shape-inner: polygon(
+      calc(3px + 0.5px) 1px,
+      calc(100% - 3px - 0.5px) 1px,
+      calc(100% - 1px) calc(100% - 3px - 0.5px),
+      calc(100% - 3px - 0.5px) calc(100% - 1px),
+      1px calc(100% - 1px),
+      1px calc(3px + 0.5px)
+    );
+
+    background-color: transparent;
+    border-radius: 0;
+  }
+
+  .button.shape-arrow {
+    --_shape: polygon(
+      0 0,
+      calc(100% - var(--_tip)) 0,
+      100% 50%,
+      calc(100% - var(--_tip)) 100%,
+      0 100%
+    );
+    --_shape-inner: polygon(
+      1px 1px,
+      calc(100% - var(--_tip) - 0.5px) 1px,
+      calc(100% - 1.5px) 50%,
+      calc(100% - var(--_tip) - 0.5px) calc(100% - 1px),
+      1px calc(100% - 1px)
+    );
+
+    padding-right: calc(var(--_px) + var(--spacing-2));
+  }
+
+  .button.shape-cut::before,
+  .button.shape-arrow::before,
+  .button.shape-cut::after,
+  .button.shape-arrow::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .button.shape-cut::before,
+  .button.shape-arrow::before {
+    background-color: var(--_bg);
+    clip-path: var(--_shape);
+  }
+
+  /*
+   * A clip-path cuts off borders, so the secondary outline is the shape
+   * filled with the outline color, with a slightly smaller shape on top.
+   * The inner shape needs a solid color, so it uses the surface of the tone.
+   */
+  .button.kind-secondary.shape-cut::before,
+  .button.kind-secondary.shape-arrow::before {
+    background-color: var(--_outline);
+  }
+
+  .button.kind-secondary.shape-cut::after,
+  .button.kind-secondary.shape-arrow::after {
+    background-color: var(--_surface);
+    clip-path: var(--_shape-inner);
+  }
+
+  .button.kind-secondary.shape-cut,
+  .button.kind-secondary.shape-arrow {
+    &:hover:not(:disabled, [aria-disabled="true"])::after,
+    &:active:not(:disabled, [aria-disabled="true"])::after {
+      background-image: linear-gradient(var(--_bg), var(--_bg));
+    }
+  }
+
+  /* Icons. The icon side gets 4px less padding (2px on small) for optical balance. */
   .icon {
-    width: var(--spacing-5);
-    height: var(--spacing-5);
-    margin: 0 calc(var(--spacing-1) * -1);
+    flex: none;
+    width: var(--_icon);
+    height: var(--_icon);
   }
 
   .icon svg {
@@ -46,6 +260,31 @@ scout-button {
     height: 100%;
   }
 
+  &.has-icon-start .button {
+    padding-left: calc(var(--_px) - var(--spacing-1));
+  }
+
+  &.has-icon-end .button {
+    padding-right: calc(var(--_px) - var(--spacing-1));
+  }
+
+  &.has-icon-end .button.shape-arrow {
+    padding-right: calc(var(--_px) + var(--spacing-2) - var(--spacing-1));
+  }
+
+  &.size-sm.has-icon-start .button {
+    padding-left: calc(var(--_px) - 2px);
+  }
+
+  &.size-sm.has-icon-end .button {
+    padding-right: calc(var(--_px) - 2px);
+  }
+
+  &.size-sm.has-icon-end .button.shape-arrow {
+    padding-right: calc(var(--_px) + var(--spacing-2) - 2px);
+  }
+
+  /* Loading */
   .spinner {
     position: absolute;
     inset: 0;
@@ -69,14 +308,14 @@ scout-button {
     opacity: 0;
   }
 
-  &.icon-only .button {
-    aspect-ratio: 1 / 1;
-    justify-content: center;
-    padding: 0;
+  /* Icon only. A separate icon button component is coming. */
+  &.icon-only {
+    width: var(--_height);
   }
 
-  &.icon-only .icon {
-    margin: 0;
+  &.icon-only .button {
+    aspect-ratio: 1 / 1;
+    padding: 0;
   }
 
   &.icon-only .content {
@@ -88,88 +327,5 @@ scout-button {
     position: absolute;
     white-space: nowrap;
     width: 1px;
-  }
-
-  .button:disabled,
-  .button[aria-disabled="true"] {
-    opacity: 0.75;
-    cursor: not-allowed;
-  }
-
-  .button.primary {
-    background-color: var(--color-background-brand-base);
-    color: var(--color-text-brand-inverse);
-
-    @media (hover: hover) {
-      &:hover:not(:disabled, [aria-disabled="true"]) {
-        background-color: var(--color-background-brand-hovered);
-      }
-    }
-
-    &:active:not(:disabled, [aria-disabled="true"]) {
-      background-color: var(--color-background-brand-pressed);
-    }
-  }
-
-  .button.outlined {
-    background-color: transparent;
-    border-color: var(--color-background-brand-subtle-base);
-    color: var(--color-text-brand-base);
-
-    @media (hover: hover) {
-      &:hover:not(:disabled, [aria-disabled="true"]) {
-        background-color: var(--color-background-brand-subtle-hovered);
-      }
-    }
-
-    &:active:not(:disabled, [aria-disabled="true"]) {
-      background-color: var(--color-background-brand-subtle-pressed);
-    }
-  }
-
-  .button.text {
-    background-color: transparent;
-    border-color: transparent;
-    color: var(--color-text-brand-base);
-
-    @media (hover: hover) {
-      &:hover:not(:disabled, [aria-disabled="true"]) {
-        background-color: var(--color-background-brand-subtle-hovered);
-      }
-    }
-
-    &:active:not(:disabled, [aria-disabled="true"]) {
-      background-color: var(--color-background-brand-subtle-pressed);
-    }
-  }
-
-  .button.caution {
-    background-color: var(--color-background-caution-bold-base);
-    color: var(--color-text-caution-bold-base);
-
-    @media (hover: hover) {
-      &:hover:not(:disabled, [aria-disabled="true"]) {
-        background-color: var(--color-background-caution-bold-hovered);
-      }
-    }
-
-    &:active:not(:disabled, [aria-disabled="true"]) {
-      background-color: var(--color-background-caution-bold-pressed);
-    }
-  }
-
-  .button.danger {
-    background-color: var(--color-background-danger-bold-base);
-    color: var(--color-text-danger-bold-base);
-
-    @media (hover: hover) {
-      &:hover:not(:disabled, [aria-disabled="true"]) {
-        background-color: var(--color-background-danger-bold-hovered);
-      }
-    }
-
-    &:active:not(:disabled, [aria-disabled="true"]) {
-      background-color: var(--color-background-danger-bold-pressed);
-    }
   }
 }

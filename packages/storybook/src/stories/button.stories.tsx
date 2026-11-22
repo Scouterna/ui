@@ -1,94 +1,107 @@
 import { ScoutButton } from "@scouterna/ui-react";
 import ArrowLeftIcon from "@tabler/icons/outline/arrow-left.svg?raw";
 import ExternalLinkIcon from "@tabler/icons/outline/external-link.svg?raw";
-import LockIcon from "@tabler/icons/outline/lock.svg?raw";
+import PencilIcon from "@tabler/icons/outline/pencil.svg?raw";
 import TrashIcon from "@tabler/icons/outline/trash.svg?raw";
 
 import preview from "#.storybook/preview";
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = preview.meta({
   title: "Interaction/Button",
   component: ScoutButton,
   parameters: {
-    // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
     layout: "centered",
   },
+  render: (args) => <ScoutButton {...args}>Knapp</ScoutButton>,
 });
 
 export default meta;
 
-// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Primary = meta.story({
-  args: {
-    variant: "primary",
-  },
-  render: (args) => <ScoutButton {...args}>Sign in</ScoutButton>,
+  args: { kind: "primary" },
 });
 
-export const Outlined = meta.story({
-  args: {
-    variant: "outlined",
-  },
-  render: (args) => <ScoutButton {...args}>Show more</ScoutButton>,
+export const Secondary = meta.story({
+  args: { kind: "secondary" },
 });
 
-export const Text = meta.story({
-  args: {
-    variant: "text",
-  },
-  render: (args) => <ScoutButton {...args}>Cancel</ScoutButton>,
+export const Tertiary = meta.story({
+  args: { kind: "tertiary" },
 });
 
-export const Caution = meta.story({
-  args: {
-    variant: "caution",
-    icon: LockIcon,
-  },
-  render: (args) => <ScoutButton {...args}>Make private</ScoutButton>,
+export const Destructive = meta.story({
+  args: { kind: "primary", tone: "destructive", iconStart: TrashIcon },
+  render: (args) => <ScoutButton {...args}>Radera</ScoutButton>,
 });
 
-export const Danger = meta.story({
-  args: {
-    variant: "danger",
-    icon: TrashIcon,
-  },
-  render: (args) => <ScoutButton {...args}>Delete</ScoutButton>,
+export const Inverse = meta.story({
+  args: { kind: "primary", tone: "inverse" },
+  decorators: [
+    (Story) => (
+      <div style={{ padding: 24, background: "var(--color-bg-inverse)" }}>
+        <Story />
+      </div>
+    ),
+  ],
+});
+
+export const Cut = meta.story({
+  args: { kind: "primary", shape: "cut" },
+});
+
+export const Arrow = meta.story({
+  args: { kind: "primary", shape: "arrow" },
+  render: (args) => <ScoutButton {...args}>Kom igång</ScoutButton>,
+});
+
+export const SecondaryArrow = meta.story({
+  args: { kind: "secondary", shape: "arrow" },
+  render: (args) => <ScoutButton {...args}>Visa fler</ScoutButton>,
+});
+
+export const Sizes = meta.story({
+  args: { kind: "primary" },
+  render: (args) => (
+    <div style={{ display: "flex", gap: 16, alignItems: "center" }}>
+      <ScoutButton {...args} size="sm">
+        Liten
+      </ScoutButton>
+      <ScoutButton {...args} size="md">
+        Medium
+      </ScoutButton>
+      <ScoutButton {...args} size="lg">
+        Stor
+      </ScoutButton>
+    </div>
+  ),
+});
+
+export const WithIcons = meta.story({
+  args: { kind: "primary", iconStart: PencilIcon },
+  render: (args) => <ScoutButton {...args}>Redigera</ScoutButton>,
 });
 
 export const Link = meta.story({
   args: {
     type: "link",
-    variant: "primary",
-    icon: ExternalLinkIcon,
+    kind: "primary",
+    iconEnd: ExternalLinkIcon,
     href: "https://www.google.com",
     target: "_blank",
     rel: "noopener noreferrer",
   },
-  render: (args) => <ScoutButton {...args}>Open Google</ScoutButton>,
+  render: (args) => <ScoutButton {...args}>Öppna Google</ScoutButton>,
 });
 
 export const Disabled = meta.story({
-  args: {
-    variant: "primary",
-    disabled: true,
-  },
-  render: (args) => <ScoutButton {...args}>Sign in</ScoutButton>,
+  args: { kind: "primary", disabled: true },
 });
 
 export const Loading = meta.story({
-  args: {
-    variant: "primary",
-    loading: true,
-    icon: LockIcon,
-  },
-  render: (args) => <ScoutButton {...args}>Sign in</ScoutButton>,
+  args: { kind: "primary", loading: true, iconStart: PencilIcon },
 });
 
 export const IconOnly = meta.story({
-  args: {
-    icon: ArrowLeftIcon,
-    iconOnly: true,
-  },
-  render: (args) => <ScoutButton {...args}>Go back</ScoutButton>,
+  args: { iconStart: ArrowLeftIcon, iconOnly: true },
+  render: (args) => <ScoutButton {...args}>Tillbaka</ScoutButton>,
 });
