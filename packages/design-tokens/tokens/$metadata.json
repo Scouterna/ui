@@ -1,18 +1,9 @@
 {
   "tokenSetOrder": [
-    "Global/Base Colors",
-    "Global/Dimensions",
-    "Global/Typography",
-    "Semantic/Colors",
-    "Misc"
+    "Core",
+    "Semantic light",
+    "Semantic typography"
   ],
   "activeThemes": [],
-  "activeSets": [
-    "Semantic/Colors",
-    "Global/Typography",
-    "Global/Base Colors",
-    "Global/Dimensions",
-    "Misc",
-    "Global"
-  ]
+  "activeSets": []
 }
