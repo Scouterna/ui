@@ -1,5 +1,12 @@
 # @scouterna/tailwind-theme
 
+## 0.0.7
+
+### Patch Changes
+
+- Updated dependencies [[`033e100`](https://github.com/Scouterna/ui/commit/033e1008664990c26f81780632a723d0a30d7f9c)]:
+  - @scouterna/design-tokens@0.0.8
+
 ## 0.0.6
 
 ### Patch Changes

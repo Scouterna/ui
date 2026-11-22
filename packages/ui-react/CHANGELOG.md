@@ -1,5 +1,15 @@
 # @scouterna/ui-react
 
+## 4.5.3
+
+### Patch Changes
+
+- [`3e5d0f7`](https://github.com/Scouterna/ui/commit/3e5d0f70bf7743af94860ca1fb13c58c23cdd6f4) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Use classes on the host element again for button and callout state. The React wrapper now merges `className` with runtime-managed classes, so the `data-*` attribute workaround is no longer needed.
+
+- [`033e100`](https://github.com/Scouterna/ui/commit/033e1008664990c26f81780632a723d0a30d7f9c) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Update dependencies
+- Updated dependencies [[`3e5d0f7`](https://github.com/Scouterna/ui/commit/3e5d0f70bf7743af94860ca1fb13c58c23cdd6f4), [`033e100`](https://github.com/Scouterna/ui/commit/033e1008664990c26f81780632a723d0a30d7f9c)]:
+  - @scouterna/ui-webc@4.5.3
+
 ## 4.5.2
 
 ### Patch Changes
