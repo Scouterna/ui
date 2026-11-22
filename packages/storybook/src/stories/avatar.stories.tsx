@@ -1,4 +1,5 @@
 import { ScoutAvatar } from "@scouterna/ui-react";
+
 import preview from "#.storybook/preview";
 
 const meta = preview.meta({

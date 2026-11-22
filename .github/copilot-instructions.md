@@ -3,51 +3,63 @@
 ## Repository Overview
 
 This is the **Scouterna Design System Components** monorepo containing:
+
 - **Stencil Web Components** (packages/ui-webc) - source of truth for all components
 - **React Component Wrappers** (packages/ui-react) - auto-generated from Stencil
 - **Design Tokens** (packages/design-tokens) - CSS variables and theme values
 - **Storybook Documentation** (packages/storybook) - component demos and documentation
 
 **Languages**: TypeScript, CSS, React, Stencil
-**Tooling**: Biome (linting/formatting), Changesets (releases), Plop (generators)
+**Tooling**: Oxc (oxlint for linting, oxfmt for formatting), Changesets (releases), Plop (generators)
 
 ## Critical Build Requirements
 
 **ALWAYS run commands in this exact order to avoid build failures:**
 
 ### 1. Initial Setup
+
 ```bash
 pnpm install  # Required before ANY other command
 ```
 
 ### 2. Full Build (required after changes)
+
 ```bash
 pnpm build  # Builds design-tokens → ui-webc → ui-react in dependency order
 ```
 
 **Build sequence is critical:**
+
 - design-tokens MUST build first (generates CSS variables)
 - ui-webc depends on design-tokens being built
 - ui-react is auto-generated from ui-webc build output
 - Never run individual package builds unless explicitly testing
 
 ### 3. Development Mode
+
 ```bash
 pnpm dev  # Runs all packages in watch mode, starts Storybook on :6006
 ```
 
-### 4. Linting (CI runs this)
+### 4. Formatting and linting (CI runs this)
+
 ```bash
-pnpm lint       # Check for errors
-pnpm lint:fix   # Auto-fix formatting/imports
+pnpm fmt         # Format all files
+pnpm fmt:check   # Check formatting without writing
+pnpm lint        # Lint (oxlint)
+pnpm lint:fix    # Apply safe lint fixes
 ```
 
-**CI Requirement**: Code MUST pass `biome ci --error-on-warnings .` - warnings are treated as errors in CI.
+**CI Requirement**: Code MUST pass `pnpm fmt:check` and `pnpm lint --deny-warnings` - warnings are treated as errors in CI.
+
+Both tools run with their default settings. Formatter ignores (generated files, plop templates, design token JSON) live in `.oxfmtrc.json`. To suppress a lint rule on one line, use `// oxlint-disable-next-line <rule> -- <reason>`.
 
 ## Project Architecture & File Locations
 
 ### Component Structure
+
 Each component lives in `packages/ui-webc/src/components/{name}/`:
+
 - `{name}.tsx` - Stencil component (source of truth)
 - `{name}.css` - Component styles (uses design tokens)
 - `readme.md` - **AUTO-GENERATED** documentation (never edit manually)
@@ -55,20 +67,24 @@ Each component lives in `packages/ui-webc/src/components/{name}/`:
 Component naming convention: All components use `scout-{name}` tag name (e.g., `scout-button`)
 
 ### Key Configuration Files
+
 - `/package.json` - Root workspace scripts
 - `/pnpm-workspace.yaml` - Monorepo workspace config
-- `/biome.json` - Linting and formatting rules
+- `/.oxlintrc.json` - Linting rules (oxlint)
+- `/.oxfmtrc.json` - Formatting config and ignore patterns (oxfmt)
 - `/.node-version` - Node version (24.5)
 - `/.changeset/config.json` - Release configuration
 - `/packages/ui-webc/stencil.config.ts` - Stencil build config with React output target
 
 ### Generated Files (Never Edit Directly)
+
 - `packages/ui-react/lib/components/stencil-generated/**` - Auto-generated from Stencil
 - `packages/ui-webc/src/components.d.ts` - Auto-generated type definitions
 - `packages/ui-webc/src/components/*/readme.md` - Auto-generated docs
 - `packages/design-tokens/dist/**` - Generated from tokens/ JSON files
 
 ### Design Tokens
+
 Source: `packages/design-tokens/tokens/**/*.json`  
 Output: `packages/design-tokens/dist/tokens.css` (imported in components)  
 Build warnings about "Unknown CSS Font Shorthand properties" are **expected and safe to ignore**.
@@ -76,11 +92,13 @@ Build warnings about "Unknown CSS Font Shorthand properties" are **expected and 
 ## Component Development Workflow
 
 ### Creating New Components
+
 ```bash
 pnpm plop  # Interactive generator creates all boilerplate
 ```
 
 This creates:
+
 - Component in `packages/ui-webc/src/components/{name}/`
 - Storybook story in `packages/storybook/src/stories/{name}.stories.tsx`
 
@@ -95,7 +113,9 @@ This creates:
 **Component Props**: Use JSDoc comments in .tsx file - they auto-generate into readme.md tables.
 
 ### Form Input Components Pattern
+
 Input-like components (checkbox, radio-button, select, input) follow this pattern:
+
 - Must have `name` prop for form submission
 - Must have `value` prop
 - Must emit `scoutChecked` or `scoutInputChange` events with `{ checked/value, element }` payload
@@ -105,6 +125,7 @@ Input-like components (checkbox, radio-button, select, input) follow this patter
 ## Testing
 
 ### Unit Tests (Stencil)
+
 ```bash
 cd packages/ui-webc
 pnpm test  # Runs spec and e2e tests with Stencil's test runner
@@ -113,7 +134,9 @@ pnpm test  # Runs spec and e2e tests with Stencil's test runner
 Tests are rare in this codebase - only `utils.spec.ts` exists currently.
 
 ### Visual Testing
+
 Use Storybook for manual visual testing. Build and preview with:
+
 ```bash
 pnpm build  # Build all packages first
 cd packages/storybook
@@ -125,6 +148,7 @@ pnpm dev    # Starts on port 6006
 **Every user-facing change REQUIRES a changeset:**
 
 1. After making changes, run:
+
 ```bash
 pnpm changeset
 ```
@@ -139,11 +163,13 @@ pnpm changeset
 ## CI/CD Pipelines
 
 ### Code Quality Check (runs on all pushes/PRs)
+
 - Workflow: `.github/workflows/code-quality.yml`
-- Runs: `biome ci --error-on-warnings .`
+- Runs: `pnpm fmt:check` and `pnpm lint --deny-warnings`
 - **Warnings = Failure** - must fix before merge
 
 ### Release Process (main branch only)
+
 - Workflow: `.github/workflows/release.yml`
 - Triggered: On push to `main`
 - Actions:
@@ -154,15 +180,18 @@ pnpm changeset
   5. Triggers Storybook deployment to GitHub Pages
 
 ### Storybook Deployment
+
 - Workflow: `.github/workflows/deploy-github-pages.yml`
 - Builds Storybook from `packages/storybook/storybook-static`
 - Deploys to GitHub Pages
 
 **To replicate CI locally:**
+
 ```bash
 pnpm install
 pnpm build
-biome ci --error-on-warnings .
+pnpm fmt:check
+pnpm lint --deny-warnings
 ```
 
 ## Common Pitfalls & Workarounds
@@ -171,7 +200,7 @@ biome ci --error-on-warnings .
 
 2. **Storybook shows old component**: After editing a component, MUST run `pnpm build` to regenerate React wrappers before Storybook reflects changes.
 
-3. **Biome errors about imports**: Run `pnpm lint:fix` - Biome auto-organizes imports.
+3. **Formatting check fails in CI**: Run `pnpm fmt` to reformat, then commit the result.
 
 4. **Design token warnings**: Warnings about "Unknown CSS Font Shorthand properties" during token build are expected and can be ignored.
 
@@ -186,6 +215,7 @@ biome ci --error-on-warnings .
 **DO NOT** suggest adding comments to the props and events tables in component readme.md files. These tables are auto-generated from the component source code and should remain comment-free to maintain consistency with the generation process.
 
 Example of tables where comments should NOT be suggested:
+
 - Props tables showing component properties
 - Events tables documenting component events
 
@@ -194,6 +224,7 @@ The documentation for these items should be maintained in the source code itself
 ## Trust These Instructions
 
 These instructions are comprehensive and tested. Only search for additional information if:
+
 - Instructions are incomplete for your specific task
 - Instructions are found to be incorrect
 - You need to understand implementation details not covered here

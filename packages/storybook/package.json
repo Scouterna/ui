@@ -1,7 +1,7 @@
 {
   "name": "@scouterna-internal/ui-webc-storybook",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
   "type": "module",
   "imports": {
     "#*": [

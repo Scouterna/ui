@@ -1,11 +1,5 @@
-import {
-  Component,
-  type ComponentInterface,
-  h,
-  Mixin,
-  Prop,
-  Watch,
-} from "@stencil/core";
+import { Component, type ComponentInterface, h, Mixin, Prop, Watch } from "@stencil/core";
+
 import { inputMixin } from "../../mixins/inputMixin";
 
 /**
@@ -18,10 +12,7 @@ import { inputMixin } from "../../mixins/inputMixin";
   styleUrl: "text-area.css",
   scoped: true,
 })
-export class ScoutTextArea
-  extends Mixin(inputMixin)
-  implements ComponentInterface
-{
+export class ScoutTextArea extends Mixin(inputMixin) implements ComponentInterface {
   @Prop() name!: string;
 
   /**

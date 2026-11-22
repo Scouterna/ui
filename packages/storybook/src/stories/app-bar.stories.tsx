@@ -1,6 +1,7 @@
 import { ScoutAppBar, ScoutButton } from "@scouterna/ui-react";
 import ArrowLeftIcon from "@tabler/icons/outline/arrow-left.svg?raw";
 import DotsIcon from "@tabler/icons/outline/dots.svg?raw";
+
 import preview from "#.storybook/preview";
 
 const meta = preview.meta({

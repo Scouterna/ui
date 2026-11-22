@@ -1,13 +1,21 @@
 {
   "name": "@scouterna/ui-webc",
   "version": "4.5.2",
-  "type": "module",
   "description": "Scouterna Design System Web Components",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Scouterna/ui.git",
+    "directory": "packages/ui-webc"
+  },
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "type": "module",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "types": "dist/types/index.d.ts",
-  "collection": "dist/collection/collection-manifest.json",
-  "collection:main": "dist/collection/index.js",
   "unpkg": "dist/ui-webc/ui-webc.esm.js",
   "exports": {
     ".": {
@@ -33,15 +41,6 @@
       "types": "./loader/index.d.ts"
     }
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Scouterna/ui.git",
-    "directory": "packages/ui-webc"
-  },
-  "files": [
-    "dist/",
-    "loader/"
-  ],
   "scripts": {
     "build": "stencil build",
     "dev": "STENCIL_SKIP_MINIFY=true stencil build --watch",
@@ -53,11 +52,11 @@
   "dependencies": {
     "@scouterna/design-tokens": "workspace:^",
     "@stencil/react-output-target": "^1.2.0",
+    "@tabler/icons": "^3.36.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "iconoir": "^7.11.0",
     "dom-focus-lock": "^1.1.0",
-    "@tabler/icons": "^3.36.1"
+    "iconoir": "^7.11.0"
   },
   "devDependencies": {
     "@stencil-community/postcss": "^2.2.0",
@@ -70,5 +69,6 @@
     "postcss-preset-env": "^10.6.0",
     "puppeteer": "^24.34.0"
   },
-  "license": "MIT"
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js"
 }

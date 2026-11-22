@@ -13,6 +13,6 @@
 :host(.no-transition),
 :host(.no-transition) *,
 :host(.no-transition) ::slotted(*) {
-  /** biome-ignore lint/complexity/noImportantStyles: It's a necessary override */
+  /** It's a necessary override */
   transition: none !important;
 }

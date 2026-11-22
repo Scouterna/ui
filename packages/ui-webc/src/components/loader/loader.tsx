@@ -1,10 +1,4 @@
-import {
-  Component,
-  type ComponentInterface,
-  Host,
-  h,
-  Prop,
-} from "@stencil/core";
+import { Component, type ComponentInterface, Host, h, Prop } from "@stencil/core";
 
 import SymbolAdventurer from "./symbols/adventurer.svg";
 import SymbolChallenger from "./symbols/challenger.svg";
@@ -31,7 +25,7 @@ export class ScoutLoader implements ComponentInterface {
     SymbolRover,
   ];
 
-  private symbolElements: HTMLDivElement[] = new Array(this.symbols.length);
+  private symbolElements: HTMLDivElement[] = [];
 
   private currentSymbolIndex = 1;
 
@@ -60,8 +54,7 @@ export class ScoutLoader implements ComponentInterface {
 
   next() {
     const currIndex = this.currentSymbolIndex;
-    const prevIndex =
-      (currIndex - 1 + this.symbols.length) % this.symbols.length;
+    const prevIndex = (currIndex - 1 + this.symbols.length) % this.symbols.length;
 
     this.showElement(this.symbolElements[currIndex]);
     this.hideElement(this.symbolElements[prevIndex]);

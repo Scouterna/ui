@@ -1,4 +1,5 @@
 import { ScoutLink } from "@scouterna/ui-react";
+
 import preview from "#.storybook/preview";
 
 const meta = preview.meta({
@@ -21,8 +22,7 @@ export const HrefLink = meta.story({
   },
   render: (args) => (
     <p>
-      This is a text with a href link inside of it leading to the{" "}
-      <ScoutLink {...args} /> website.
+      This is a text with a href link inside of it leading to the <ScoutLink {...args} /> website.
     </p>
   ),
 });
@@ -35,8 +35,7 @@ export const ButtonLink = meta.story({
   },
   render: (args) => (
     <p>
-      This is a <ScoutLink {...args} /> with an onClick event triggering an
-      event.
+      This is a <ScoutLink {...args} /> with an onClick event triggering an event.
     </p>
   ),
 });

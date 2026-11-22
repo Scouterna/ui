@@ -1,5 +1,6 @@
 import { ScoutTabs, ScoutTabsTab } from "@scouterna/ui-react";
 import { useArgs } from "storybook/internal/preview-api";
+
 import preview from "#.storybook/preview";
 
 const meta = preview.meta({
@@ -19,10 +20,7 @@ export const BasicExample = meta.story({
 
     return (
       <div style={{ display: "flex", width: "20rem", height: "3.5rem" }}>
-        <ScoutTabs
-          {...args}
-          onScoutChange={(e) => setArgs({ value: e.detail.value })}
-        >
+        <ScoutTabs {...args} onScoutChange={(e) => setArgs({ value: e.detail.value })}>
           <ScoutTabsTab>Händelser</ScoutTabsTab>
           <ScoutTabsTab>Information</ScoutTabsTab>
         </ScoutTabs>

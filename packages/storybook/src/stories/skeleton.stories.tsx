@@ -1,4 +1,5 @@
 import { ScoutSkeleton } from "@scouterna/ui-react";
+
 import preview from "#.storybook/preview";
 
 const meta = preview.meta({
@@ -13,7 +14,5 @@ export default meta;
 
 export const BasicExample = meta.story({
   args: {},
-  render: (args) => (
-    <ScoutSkeleton {...args} style={{ width: "300px", height: "300px" }} />
-  ),
+  render: (args) => <ScoutSkeleton {...args} style={{ width: "300px", height: "300px" }} />,
 });

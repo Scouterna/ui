@@ -7,6 +7,7 @@ import {
   ScoutSwitch,
 } from "@scouterna/ui-react";
 import { useState } from "storybook/internal/preview-api";
+
 import preview from "#.storybook/preview";
 
 const meta = preview.meta({

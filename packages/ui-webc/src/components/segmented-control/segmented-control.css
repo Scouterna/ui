@@ -68,6 +68,6 @@
 }
 
 ::slotted(button[aria-checked="true"]) {
-  /* biome-ignore lint/complexity/noImportantStyles: We need this because the global styles takes precedence over the webc styles */
+  /* We need this because the global styles takes precedence over the webc styles */
   color: var(--color-text-brand-inverse) !important;
 }

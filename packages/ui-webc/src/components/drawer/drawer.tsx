@@ -76,9 +76,6 @@ export class ScoutDrawer implements ComponentInterface {
       this.setDrawerOpenState(true);
     }
   }
-  disconnectedCallback(): void {
-    this.focusedNode;
-  }
   /**
    * Fired when clicking backButton (<-)
    */
@@ -133,9 +130,8 @@ export class ScoutDrawer implements ComponentInterface {
    */
   private updateFocusTrapNodes() {
     const shadowButtons = Array.from(
-      this.rootElement.shadowRoot?.querySelectorAll<HTMLElement>(
-        ".exit-button, .back-button",
-      ) ?? [],
+      this.rootElement.shadowRoot?.querySelectorAll<HTMLElement>(".exit-button, .back-button") ??
+        [],
     );
     const slotted = (this.slotRef?.assignedElements() ?? []) as HTMLElement[];
     this.focusTrapNodes.length = 0;
@@ -143,8 +139,7 @@ export class ScoutDrawer implements ComponentInterface {
   }
 
   render() {
-    const shouldRenderHeader =
-      this.heading || this.showBackButton || this.showExitButton;
+    const shouldRenderHeader = this.heading || this.showBackButton || this.showExitButton;
 
     const getDrawerStateClass = (state: string) => {
       switch (state) {
@@ -159,8 +154,6 @@ export class ScoutDrawer implements ComponentInterface {
     return (
       <div class="drawer">
         {!this.disableBackdrop && (
-          // biome-ignore lint/a11y/noStaticElementInteractions: <closable backdrop>
-          // biome-ignore lint/a11y/useKeyWithClickEvents: <closable backdrop>
           <div
             onClick={() => {
               this.onExitButtonClick();
@@ -177,21 +170,13 @@ export class ScoutDrawer implements ComponentInterface {
           {shouldRenderHeader && (
             <div class="header--wrapper">
               {this.showBackButton && (
-                <button
-                  type="button"
-                  class="back-button"
-                  onClick={() => this.onBackButtonClick()}
-                >
+                <button type="button" class="back-button" onClick={() => this.onBackButtonClick()}>
                   <span class="icon" innerHTML={backIcon}></span>
                   <span class="visually-hidden">{this.backButtonLabel}</span>
                 </button>
               )}
               {this.showExitButton && (
-                <button
-                  type="button"
-                  class="exit-button"
-                  onClick={() => this.onExitButtonClick()}
-                >
+                <button type="button" class="exit-button" onClick={() => this.onExitButtonClick()}>
                   <span class="icon" innerHTML={exitIcon}></span>
                   <span class="visually-hidden">{this.exitButtonLabel}</span>
                 </button>
@@ -211,9 +196,7 @@ export class ScoutDrawer implements ComponentInterface {
                   // while the drawer stays open, which doesn't trigger the
                   // `open` watcher. `slotchange` fires whenever the directly
                   // assigned node(s) change, so re-sync the trap then too.
-                  slot.addEventListener("slotchange", () =>
-                    this.updateFocusTrapNodes(),
-                  );
+                  slot.addEventListener("slotchange", () => this.updateFocusTrapNodes());
                 }
                 this.slotRef = slot;
               }}

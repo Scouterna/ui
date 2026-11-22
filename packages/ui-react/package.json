@@ -2,33 +2,33 @@
   "name": "@scouterna/ui-react",
   "version": "4.5.2",
   "description": "Scouterna Design System React Components",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/types/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "keywords": [],
+  "license": "MIT",
+  "author": "",
   "repository": {
     "type": "git",
     "url": "https://github.com/Scouterna/ui.git",
     "directory": "packages/ui-react"
   },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/types/index.d.ts",
   "scripts": {
     "build": "tsc --outDir ./dist",
     "dev": "tsc --outDir ./dist --watch --preserveWatchOutput"
   },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
-  "packageManager": "pnpm@10.24.0",
   "dependencies": {
-    "@stencil/react-output-target": "^1.2.0",
-    "@scouterna/ui-webc": "workspace:*"
+    "@scouterna/ui-webc": "workspace:*",
+    "@stencil/react-output-target": "^1.2.0"
   },
   "devDependencies": {
     "@types/react": "^19.2.7",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "typescript": "^5.9.3"
-  }
+  },
+  "packageManager": "pnpm@10.24.0"
 }

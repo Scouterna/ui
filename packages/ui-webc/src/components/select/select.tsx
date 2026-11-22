@@ -1,12 +1,6 @@
-import {
-  Component,
-  type ComponentInterface,
-  Element,
-  h,
-  Mixin,
-  Prop,
-} from "@stencil/core";
+import { Component, type ComponentInterface, Element, h, Mixin, Prop } from "@stencil/core";
 import chevronIcon from "@tabler/icons/outline/chevron-down.svg";
+
 import { inputMixin } from "../../mixins/inputMixin";
 
 /**
@@ -19,10 +13,7 @@ import { inputMixin } from "../../mixins/inputMixin";
   styleUrl: "select.css",
   scoped: true,
 })
-export class ScoutSelect
-  extends Mixin(inputMixin)
-  implements ComponentInterface
-{
+export class ScoutSelect extends Mixin(inputMixin) implements ComponentInterface {
   /**
    * Value of the select element, in case you want to control it yourself.
    */

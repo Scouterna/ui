@@ -6,6 +6,7 @@ import InfoCircleIcon from "iconoir/icons/info-circle.svg?raw";
 import MapIcon from "iconoir/icons/map.svg?raw";
 import MoreHorizIcon from "iconoir/icons/more-horiz.svg?raw";
 import { useState } from "storybook/internal/preview-api";
+
 import preview from "#.storybook/preview";
 
 const meta = preview.meta({
@@ -35,7 +36,7 @@ export const BasicExample = meta.story({
         <ScoutBottomBar {...args}>
           {items.map((item, index) => (
             <ScoutBottomBarItem
-              // biome-ignore lint/suspicious/noArrayIndexKey: They're static
+              // The items are static, so the index is a stable key
               key={index}
               active={active === index}
               onScoutClick={() => setActive(index)}
@@ -67,7 +68,7 @@ export const TightExample = meta.story({
         <ScoutBottomBar {...args}>
           {items.map((item, index) => (
             <ScoutBottomBarItem
-              // biome-ignore lint/suspicious/noArrayIndexKey: They're static
+              // The items are static, so the index is a stable key
               key={index}
               active={active === index}
               onScoutClick={() => setActive(index)}

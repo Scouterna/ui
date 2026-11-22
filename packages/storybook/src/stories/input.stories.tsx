@@ -1,6 +1,7 @@
 import { ScoutInput } from "@scouterna/ui-react";
 import SearchIcon from "@tabler/icons/outline/search.svg?raw";
 import UserIcon from "@tabler/icons/outline/user.svg?raw";
+
 import preview from "#.storybook/preview";
 
 const meta = preview.meta({

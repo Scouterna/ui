@@ -1,5 +1,6 @@
 import { ScoutSegmentedControl } from "@scouterna/ui-react";
 import { useArgs } from "storybook/internal/preview-api";
+
 import preview from "#.storybook/preview";
 
 const meta = preview.meta({
@@ -18,10 +19,7 @@ export const BasicExample = meta.story({
     const [_, setArgs] = useArgs();
 
     return (
-      <ScoutSegmentedControl
-        {...args}
-        onScoutChange={(e) => setArgs({ value: e.detail.value })}
-      >
+      <ScoutSegmentedControl {...args} onScoutChange={(e) => setArgs({ value: e.detail.value })}>
         <button type="button">Alla</button>
         <button type="button">Bokade</button>
       </ScoutSegmentedControl>

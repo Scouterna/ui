@@ -1,4 +1,5 @@
 import { ScoutStack } from "@scouterna/ui-react";
+
 import preview from "#.storybook/preview";
 
 const style = {

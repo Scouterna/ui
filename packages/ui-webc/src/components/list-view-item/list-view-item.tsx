@@ -1,12 +1,4 @@
-import {
-  Component,
-  Event,
-  type EventEmitter,
-  Host,
-  h,
-  Prop,
-} from "@stencil/core";
-
+import { Component, Event, type EventEmitter, Host, h, Prop } from "@stencil/core";
 import ChevronRightIcon from "@tabler/icons/outline/chevron-right.svg";
 
 export type ItemType = "button" | "link" | "radio" | "checkbox";
@@ -61,9 +53,7 @@ export class ScoutListViewItem {
             href: this.href,
             target: this.target,
             // This might not be our job, but better safe than sorry.
-            rel:
-              this.rel ??
-              (this.target === "_blank" ? "noopener noreferrer" : undefined),
+            rel: this.rel ?? (this.target === "_blank" ? "noopener noreferrer" : undefined),
           }
         : {};
 

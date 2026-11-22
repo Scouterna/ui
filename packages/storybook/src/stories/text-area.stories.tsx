@@ -1,5 +1,6 @@
 import { ScoutField, ScoutTextArea } from "@scouterna/ui-react";
 import { useState } from "storybook/internal/preview-api";
+
 import preview from "#.storybook/preview";
 
 const meta = preview.meta({
@@ -47,10 +48,7 @@ export const WithCustomValidation = meta.story({
     const [validity, setValidity] = useState("");
 
     return (
-      <ScoutField
-        label="Biography"
-        helpText="This field must be at least 10 characters."
-      >
+      <ScoutField label="Biography" helpText="This field must be at least 10 characters.">
         <ScoutTextArea
           validity={validity}
           onScoutValidate={(e) => {

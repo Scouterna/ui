@@ -82,9 +82,7 @@ export class ScoutTabs implements ComponentInterface {
   componentDidLoad() {
     this.updateChildrenClasses();
     this.calculateIndicatorSizes();
-    this.resizeObserver = new ResizeObserver(() =>
-      this.calculateIndicatorSizes(),
-    );
+    this.resizeObserver = new ResizeObserver(() => this.calculateIndicatorSizes());
     this.resizeObserver.observe(this.el);
   }
 
@@ -103,21 +101,12 @@ export class ScoutTabs implements ComponentInterface {
     const hi = Math.min(count - 1, lo + 1);
     const frac = v - lo;
 
-    const width = lerp(
-      this.widths[lo] ?? 0,
-      this.widths[hi] ?? this.widths[lo] ?? 0,
-      frac,
-    );
-    const left = lerp(
-      this.lefts[lo] ?? 0,
-      this.lefts[hi] ?? this.lefts[lo] ?? 0,
-      frac,
-    );
+    const width = lerp(this.widths[lo] ?? 0, this.widths[hi] ?? this.widths[lo] ?? 0, frac);
+    const left = lerp(this.lefts[lo] ?? 0, this.lefts[hi] ?? this.lefts[lo] ?? 0, frac);
 
     // Disable transition while finger is mid-drag (fractional swipeValue) so
     // the indicator tracks the finger without lag. Re-enable for the snap animation.
-    const isMidDrag =
-      this.swipeValue !== undefined && !Number.isInteger(this.swipeValue);
+    const isMidDrag = this.swipeValue !== undefined && !Number.isInteger(this.swipeValue);
 
     const indicatorStyle = {
       width: `${width}px`,
@@ -146,8 +135,7 @@ export class ScoutTabs implements ComponentInterface {
     if (currentIndex === -1) return;
 
     let nextIndex = currentIndex;
-    if (e.key === "ArrowRight")
-      nextIndex = Math.min(currentIndex + 1, tabs.length - 1);
+    if (e.key === "ArrowRight") nextIndex = Math.min(currentIndex + 1, tabs.length - 1);
     else if (e.key === "ArrowLeft") nextIndex = Math.max(currentIndex - 1, 0);
     else if (e.key === "Home") nextIndex = 0;
     else if (e.key === "End") nextIndex = tabs.length - 1;
@@ -180,9 +168,7 @@ export class ScoutTabs implements ComponentInterface {
   }
 
   calculateIndicatorSizes() {
-    this.widths = Array.from(this.el.children).map(
-      (child) => (child as HTMLElement).offsetWidth,
-    );
+    this.widths = Array.from(this.el.children).map((child) => (child as HTMLElement).offsetWidth);
     this.lefts = this.widths.map((_, index) =>
       this.widths.slice(0, index).reduce((acc, w) => acc + w, 0),
     );

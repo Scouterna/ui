@@ -1,12 +1,12 @@
 <script>
-  const root = document.getElementById('root');
+  const root = document.getElementById("root");
   root.outerHTML = `
   <div class="dev-warning-banner">
     <p class="dev-warning-banner-text">
       Preview build.&nbsp;<a href="https://scouterna.github.io/ui/?path=/docs/home--docs">Go to latest version.</a>
     </p>
   </div>
-  ${root.outerHTML}`
+  ${root.outerHTML}`;
 </script>
 <style>
   .dev-warning-banner {
@@ -15,13 +15,7 @@
     width: 100%;
     height: 1.75rem;
     text-align: center;
-    background: repeating-linear-gradient(
-      45deg,
-      black,
-      black 10px,
-      yellow 10px,
-      yellow 20px
-    );
+    background: repeating-linear-gradient(45deg, black, black 10px, yellow 10px, yellow 20px);
   }
 
   .dev-warning-banner-text {
