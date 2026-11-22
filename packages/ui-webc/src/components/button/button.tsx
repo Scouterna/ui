@@ -1,5 +1,5 @@
 import { Component, Event, type EventEmitter, Host, h, Prop } from "@stencil/core";
-import Loader2Icon from "@tabler/icons/outline/loader-2.svg";
+import Loader2Icon from "@phosphor-icons/core/assets/bold/spinner-bold.svg";
 
 export type Kind = "primary" | "secondary" | "tertiary";
 export type Tone = "default" | "inverse" | "destructive";

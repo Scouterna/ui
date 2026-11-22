@@ -1,6 +1,6 @@
 import { ScoutInput } from "@scouterna/ui-react";
-import SearchIcon from "@tabler/icons/outline/search.svg?raw";
-import UserIcon from "@tabler/icons/outline/user.svg?raw";
+import SearchIcon from "@phosphor-icons/core/assets/bold/magnifying-glass-bold.svg?raw";
+import UserIcon from "@phosphor-icons/core/assets/fill/user-fill.svg?raw";
 
 import preview from "#.storybook/preview";
 

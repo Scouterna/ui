@@ -1,11 +1,11 @@
 import { Component, Element, Event, type EventEmitter, Host, h, Prop, State } from "@stencil/core";
-import AlertOctagonIcon from "@tabler/icons/outline/alert-octagon.svg";
-import AlertTriangleIcon from "@tabler/icons/outline/alert-triangle.svg";
-import CircleCheckIcon from "@tabler/icons/outline/circle-check.svg";
-import InfoCircleIcon from "@tabler/icons/outline/info-circle.svg";
-import SparklesIcon from "@tabler/icons/outline/sparkles.svg";
-import SpeakerphoneIcon from "@tabler/icons/outline/speakerphone.svg";
-import XIcon from "@tabler/icons/outline/x.svg";
+import AlertOctagonIcon from "@phosphor-icons/core/assets/fill/warning-octagon-fill.svg";
+import AlertTriangleIcon from "@phosphor-icons/core/assets/fill/warning-fill.svg";
+import CircleCheckIcon from "@phosphor-icons/core/assets/fill/check-circle-fill.svg";
+import InfoCircleIcon from "@phosphor-icons/core/assets/fill/info-fill.svg";
+import SparklesIcon from "@phosphor-icons/core/assets/fill/sparkle-fill.svg";
+import SpeakerphoneIcon from "@phosphor-icons/core/assets/fill/megaphone-fill.svg";
+import XIcon from "@phosphor-icons/core/assets/bold/x-bold.svg";
 
 export type CalloutVariant = "info" | "tip" | "success" | "warning" | "error" | "announcement";
 

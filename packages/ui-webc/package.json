@@ -54,9 +54,9 @@
     "generate": "stencil generate"
   },
   "dependencies": {
+    "@phosphor-icons/core": "^2.1.1",
     "@scouterna/design-tokens": "workspace:^",
     "@stencil/react-output-target": "^1.8.1",
-    "@tabler/icons": "^3.52.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "dom-focus-lock": "^1.1.0",

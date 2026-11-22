@@ -1,8 +1,8 @@
 import { ScoutButton } from "@scouterna/ui-react";
-import ArrowLeftIcon from "@tabler/icons/outline/arrow-left.svg?raw";
-import ExternalLinkIcon from "@tabler/icons/outline/external-link.svg?raw";
-import PencilIcon from "@tabler/icons/outline/pencil.svg?raw";
-import TrashIcon from "@tabler/icons/outline/trash.svg?raw";
+import ArrowLeftIcon from "@phosphor-icons/core/assets/bold/arrow-left-bold.svg?raw";
+import ExternalLinkIcon from "@phosphor-icons/core/assets/bold/arrow-square-out-bold.svg?raw";
+import PencilIcon from "@phosphor-icons/core/assets/bold/pencil-simple-bold.svg?raw";
+import TrashIcon from "@phosphor-icons/core/assets/bold/trash-bold.svg?raw";
 
 import preview from "#.storybook/preview";
 

@@ -8,7 +8,7 @@ import {
   State,
   Watch,
 } from "@stencil/core";
-import xIcon from "@tabler/icons/outline/x.svg";
+import xIcon from "@phosphor-icons/core/assets/bold/x-bold.svg";
 
 import { inputMixin } from "../../mixins/inputMixin";
 
@@ -109,7 +109,7 @@ export class ScoutInput extends Mixin(inputMixin) implements ComponentInterface 
   /**
    * Raw SVG string for an icon to display at the leading edge of the input.
    * Import with the `?raw` suffix, e.g. `import searchIcon from
-   * "@tabler/icons/outline/search.svg?raw"`.
+   * "@phosphor-icons/core/assets/bold/magnifying-glass-bold.svg?raw"`.
    */
   @Prop() icon?: string;
 

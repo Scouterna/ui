@@ -1,5 +1,5 @@
 import { Component, type ComponentInterface, Element, h, Mixin, Prop } from "@stencil/core";
-import chevronIcon from "@tabler/icons/outline/chevron-down.svg";
+import chevronIcon from "@phosphor-icons/core/assets/bold/caret-down-bold.svg";
 
 import { inputMixin } from "../../mixins/inputMixin";
 
