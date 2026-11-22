@@ -19,7 +19,8 @@
     "./*": "./dist/*"
   },
   "scripts": {
-    "build": "node build-tokens.mjs"
+    "build": "node build-tokens.mjs",
+    "tokens:import": "node --env-file=.env import-tokens.ts"
   },
   "dependencies": {
     "glob": "^14.0.6"
