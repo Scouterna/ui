@@ -4,31 +4,31 @@
 
 ### Patch Changes
 
-- [`ce175a5`](https://github.com/Scouterna/j26-components/commit/ce175a50f8d42feef295d99d7a8952375290b875) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add xs variants to body and label typographies.
+- [`ce175a5`](https://github.com/Scouterna/ui/commit/ce175a50f8d42feef295d99d7a8952375290b875) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add xs variants to body and label typographies.
 
 ## 0.0.6
 
 ### Patch Changes
 
-- [`436a2a4`](https://github.com/Scouterna/j26-components/commit/436a2a46417bbad85d0bc4d3c5c06d5904cce970) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Update gray-50 to be softer
+- [`436a2a4`](https://github.com/Scouterna/ui/commit/436a2a46417bbad85d0bc4d3c5c06d5904cce970) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Update gray-50 to be softer
 
 ## 0.0.5
 
 ### Patch Changes
 
-- [`eff875e`](https://github.com/Scouterna/j26-components/commit/eff875ef8061f66d283fbeb3e2855acb4eba528a) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add Tailwind theme
+- [`eff875e`](https://github.com/Scouterna/ui/commit/eff875ef8061f66d283fbeb3e2855acb4eba528a) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add Tailwind theme
 
 ## 0.0.4
 
 ### Patch Changes
 
-- [#84](https://github.com/Scouterna/j26-components/pull/84) [`a578b94`](https://github.com/Scouterna/j26-components/commit/a578b941d8ceb67ff2e5b9e6f70fcc16beb2464c) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Fix things that didn't work properly in scoutin.
+- [#84](https://github.com/Scouterna/ui/pull/84) [`a578b94`](https://github.com/Scouterna/ui/commit/a578b941d8ceb67ff2e5b9e6f70fcc16beb2464c) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Fix things that didn't work properly in scoutin.
 
 ## 0.0.3
 
 ### Patch Changes
 
-- [`9eaf114`](https://github.com/Scouterna/j26-components/commit/9eaf1149f20a0a65196a303183d580b63a28180c) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Include built output
+- [`9eaf114`](https://github.com/Scouterna/ui/commit/9eaf1149f20a0a65196a303183d580b63a28180c) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Include built output
 
 ## 0.0.2
 

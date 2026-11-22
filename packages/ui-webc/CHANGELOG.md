@@ -4,199 +4,199 @@
 
 ### Patch Changes
 
-- [`319ac28`](https://github.com/Scouterna/j26-components/commit/319ac281df409a08b2e40e901f4ffc21b8fa0834) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Make drawer content scrollable when it overflows the drawer height.
+- [`319ac28`](https://github.com/Scouterna/ui/commit/319ac281df409a08b2e40e901f4ffc21b8fa0834) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Make drawer content scrollable when it overflows the drawer height.
 
 ## 4.5.1
 
 ### Patch Changes
 
-- [`d6688a3`](https://github.com/Scouterna/j26-components/commit/d6688a305fe186f1cc5edd2574653c63c2c5eeb8) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Enable experimentalSlotFixes to avoid React re-rendering issues with slots.
+- [`d6688a3`](https://github.com/Scouterna/ui/commit/d6688a305fe186f1cc5edd2574653c63c2c5eeb8) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Enable experimentalSlotFixes to avoid React re-rendering issues with slots.
 
 ## 4.5.0
 
 ### Minor Changes
 
-- [#130](https://github.com/Scouterna/j26-components/pull/130) [`dd34fd2`](https://github.com/Scouterna/j26-components/commit/dd34fd232a6f5214672ec9c7d3d6fcb51340b020) Thanks [@Anna-Qvil](https://github.com/Anna-Qvil)! - Add text-area component.
+- [#130](https://github.com/Scouterna/ui/pull/130) [`dd34fd2`](https://github.com/Scouterna/ui/commit/dd34fd232a6f5214672ec9c7d3d6fcb51340b020) Thanks [@Anna-Qvil](https://github.com/Anna-Qvil)! - Add text-area component.
 
 ## 4.4.4
 
 ### Patch Changes
 
-- [`b602c94`](https://github.com/Scouterna/j26-components/commit/b602c942429e6a2bcec95ab9995d68b5796415d5) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Keep drawer focus trap in sync when slotted content is replaced.
+- [`b602c94`](https://github.com/Scouterna/ui/commit/b602c942429e6a2bcec95ab9995d68b5796415d5) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Keep drawer focus trap in sync when slotted content is replaced.
 
 ## 4.4.3
 
 ### Patch Changes
 
-- [`d1fd886`](https://github.com/Scouterna/j26-components/commit/d1fd886ffeb687bca7154ea22f70c7f6e79f0a4a) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Fix focus lock breaking focus in drawer.
+- [`d1fd886`](https://github.com/Scouterna/ui/commit/d1fd886ffeb687bca7154ea22f70c7f6e79f0a4a) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Fix focus lock breaking focus in drawer.
 
 ## 4.4.2
 
 ### Patch Changes
 
-- [`0cb4c17`](https://github.com/Scouterna/j26-components/commit/0cb4c17ad99d7ef558f1b9d63dbd8dfe5422f0d5) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Fix drawer click-through bug and minor visual improvements.
+- [`0cb4c17`](https://github.com/Scouterna/ui/commit/0cb4c17ad99d7ef558f1b9d63dbd8dfe5422f0d5) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Fix drawer click-through bug and minor visual improvements.
 
-- [`ce97bd9`](https://github.com/Scouterna/j26-components/commit/ce97bd92e263a7d98c68a72b564a9e4784b26a79) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Make select match height of other inputs
+- [`ce97bd9`](https://github.com/Scouterna/ui/commit/ce97bd92e263a7d98c68a72b564a9e4784b26a79) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Make select match height of other inputs
 
 ## 4.4.1
 
 ### Patch Changes
 
-- [`5cc1e6c`](https://github.com/Scouterna/j26-components/commit/5cc1e6cdb65144ad14325e392441831df089d99c) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Made text size smaller for bottom bar.
+- [`5cc1e6c`](https://github.com/Scouterna/ui/commit/5cc1e6cdb65144ad14325e392441831df089d99c) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Made text size smaller for bottom bar.
 
-- [`f235b12`](https://github.com/Scouterna/j26-components/commit/f235b127f482c8a6092072c864e07bfed041634c) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Make bottom bar items highlight a bit wider.
+- [`f235b12`](https://github.com/Scouterna/ui/commit/f235b127f482c8a6092072c864e07bfed041634c) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Make bottom bar items highlight a bit wider.
 
-- Updated dependencies [[`ce175a5`](https://github.com/Scouterna/j26-components/commit/ce175a50f8d42feef295d99d7a8952375290b875)]:
+- Updated dependencies [[`ce175a5`](https://github.com/Scouterna/ui/commit/ce175a50f8d42feef295d99d7a8952375290b875)]:
   - @scouterna/design-tokens@0.0.7
 
 ## 4.4.0
 
 ### Minor Changes
 
-- [`57d1027`](https://github.com/Scouterna/j26-components/commit/57d10274bb0585133a72d9ef159b6dfe1f0c3f9a) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add loading prop to button component.
+- [`57d1027`](https://github.com/Scouterna/ui/commit/57d10274bb0585133a72d9ef159b6dfe1f0c3f9a) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add loading prop to button component.
 
 ## 4.3.7
 
 ### Patch Changes
 
-- [`64a70cc`](https://github.com/Scouterna/j26-components/commit/64a70cca159243daa9e1702b5212ca36e6504c40) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add autocomplete prop to input component.
+- [`64a70cc`](https://github.com/Scouterna/ui/commit/64a70cca159243daa9e1702b5212ca36e6504c40) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add autocomplete prop to input component.
 
 ## 4.3.6
 
 ### Patch Changes
 
-- [`b33f443`](https://github.com/Scouterna/j26-components/commit/b33f443433ffd77fd2ec9a821e68307a1de2577c) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add defaultValue prop to input component.
+- [`b33f443`](https://github.com/Scouterna/ui/commit/b33f443433ffd77fd2ec9a821e68307a1de2577c) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add defaultValue prop to input component.
 
 ## 4.3.5
 
 ### Patch Changes
 
-- [`bc87881`](https://github.com/Scouterna/j26-components/commit/bc878819d876a046e42b9ef8f65676641d0a51e0) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Make app bar prefix/suffix buttons not overlay title on iOS.
+- [`bc87881`](https://github.com/Scouterna/ui/commit/bc878819d876a046e42b9ef8f65676641d0a51e0) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Make app bar prefix/suffix buttons not overlay title on iOS.
 
 ## 4.3.4
 
 ### Patch Changes
 
-- [`c696c67`](https://github.com/Scouterna/j26-components/commit/c696c67978b70a183e660f9f100fc2a1bc1de634) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Move segmented control styling into shadow DOM
+- [`c696c67`](https://github.com/Scouterna/ui/commit/c696c67978b70a183e660f9f100fc2a1bc1de634) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Move segmented control styling into shadow DOM
 
 ## 4.3.3
 
 ### Patch Changes
 
-- [#117](https://github.com/Scouterna/j26-components/pull/117) [`1ac2ef0`](https://github.com/Scouterna/j26-components/commit/1ac2ef0f8985394ffdf65724caf10ebc21e99787) Thanks [@m4reko](https://github.com/m4reko)! - Make select component render options in correct location in shadow dom.
+- [#117](https://github.com/Scouterna/ui/pull/117) [`1ac2ef0`](https://github.com/Scouterna/ui/commit/1ac2ef0f8985394ffdf65724caf10ebc21e99787) Thanks [@m4reko](https://github.com/m4reko)! - Make select component render options in correct location in shadow dom.
 
-- [#116](https://github.com/Scouterna/j26-components/pull/116) [`11f225e`](https://github.com/Scouterna/j26-components/commit/11f225e5a095e31142b4722ce3f1c52777b44b7b) Thanks [@m4reko](https://github.com/m4reko)! - Recalculate Segmented Control indicator size on resize.
+- [#116](https://github.com/Scouterna/ui/pull/116) [`11f225e`](https://github.com/Scouterna/ui/commit/11f225e5a095e31142b4722ce3f1c52777b44b7b) Thanks [@m4reko](https://github.com/m4reko)! - Recalculate Segmented Control indicator size on resize.
 
 ## 4.3.2
 
 ### Patch Changes
 
-- [`4e884ff`](https://github.com/Scouterna/j26-components/commit/4e884ff1af1822cdd6fa84d145ab279f4fc918ef) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Surface types in exports field
+- [`4e884ff`](https://github.com/Scouterna/ui/commit/4e884ff1af1822cdd6fa84d145ab279f4fc918ef) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Surface types in exports field
 
-- [`4d8aa7d`](https://github.com/Scouterna/j26-components/commit/4d8aa7d89733e6536ef274b658ddeb3f04cfca01) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Fix checkbox size when on scaled screens
+- [`4d8aa7d`](https://github.com/Scouterna/ui/commit/4d8aa7d89733e6536ef274b658ddeb3f04cfca01) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Fix checkbox size when on scaled screens
 
 ## 4.3.1
 
 ### Patch Changes
 
-- [`2ca4664`](https://github.com/Scouterna/j26-components/commit/2ca4664ebe91032c29682b3b13c0c80a4ea5e081) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Expose checked event in list view item
+- [`2ca4664`](https://github.com/Scouterna/ui/commit/2ca4664ebe91032c29682b3b13c0c80a4ea5e081) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Expose checked event in list view item
 
 ## 4.3.0
 
 ### Minor Changes
 
-- [`806d313`](https://github.com/Scouterna/j26-components/commit/806d3135877ebb98b79b54400d2ec7bc36eb5499) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add disabled prop to buttons
+- [`806d313`](https://github.com/Scouterna/ui/commit/806d3135877ebb98b79b54400d2ec7bc36eb5499) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add disabled prop to buttons
 
-- [#109](https://github.com/Scouterna/j26-components/pull/109) [`69e1179`](https://github.com/Scouterna/j26-components/commit/69e1179ab8e2e69600895291535c614e33a468e2) Thanks [@daBack](https://github.com/daBack)! - Skeleton component
+- [#109](https://github.com/Scouterna/ui/pull/109) [`69e1179`](https://github.com/Scouterna/ui/commit/69e1179ab8e2e69600895291535c614e33a468e2) Thanks [@daBack](https://github.com/daBack)! - Skeleton component
 
-- [#110](https://github.com/Scouterna/j26-components/pull/110) [`ca81762`](https://github.com/Scouterna/j26-components/commit/ca81762513035c7479827c764282c840874152d1) Thanks [@daBack](https://github.com/daBack)! - Pagination
+- [#110](https://github.com/Scouterna/ui/pull/110) [`ca81762`](https://github.com/Scouterna/ui/commit/ca81762513035c7479827c764282c840874152d1) Thanks [@daBack](https://github.com/daBack)! - Pagination
 
-- [#109](https://github.com/Scouterna/j26-components/pull/109) [`69e1179`](https://github.com/Scouterna/j26-components/commit/69e1179ab8e2e69600895291535c614e33a468e2) Thanks [@daBack](https://github.com/daBack)! - Skeleton component
+- [#109](https://github.com/Scouterna/ui/pull/109) [`69e1179`](https://github.com/Scouterna/ui/commit/69e1179ab8e2e69600895291535c614e33a468e2) Thanks [@daBack](https://github.com/daBack)! - Skeleton component
 
 ### Patch Changes
 
-- [`aac8a34`](https://github.com/Scouterna/j26-components/commit/aac8a34a0207d962a50f0040ec297b44328af073) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Make controlled input emit validity event
+- [`aac8a34`](https://github.com/Scouterna/ui/commit/aac8a34a0207d962a50f0040ec297b44328af073) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Make controlled input emit validity event
 
 ## 4.2.1
 
 ### Patch Changes
 
-- [`484a7aa`](https://github.com/Scouterna/j26-components/commit/484a7aa3d87910ac3646be0a7684bc1efd061900) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Use responsive values for inputs and buttons
+- [`484a7aa`](https://github.com/Scouterna/ui/commit/484a7aa3d87910ac3646be0a7684bc1efd061900) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Use responsive values for inputs and buttons
 
 ## 4.2.0
 
 ### Minor Changes
 
-- [`b5ee046`](https://github.com/Scouterna/j26-components/commit/b5ee0465778bb1a531fc986974dff76b5252e17a) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add optional clear button to input fields
+- [`b5ee046`](https://github.com/Scouterna/ui/commit/b5ee0465778bb1a531fc986974dff76b5252e17a) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add optional clear button to input fields
 
-- [`d1af7b7`](https://github.com/Scouterna/j26-components/commit/d1af7b7588dabe84891bf8d236cdcff2c459797f) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Update input to match list view
+- [`d1af7b7`](https://github.com/Scouterna/ui/commit/d1af7b7588dabe84891bf8d236cdcff2c459797f) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Update input to match list view
 
-- [`7dd5732`](https://github.com/Scouterna/j26-components/commit/7dd5732990a811209c8b442105ce55cdf263c725) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Optional icon in input fields
+- [`7dd5732`](https://github.com/Scouterna/ui/commit/7dd5732990a811209c8b442105ce55cdf263c725) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Optional icon in input fields
 
 ### Patch Changes
 
-- [`92b24f4`](https://github.com/Scouterna/j26-components/commit/92b24f4a56304f75b86db4dcf6d70eda98e5e222) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Make buttons have same size as inputs
+- [`92b24f4`](https://github.com/Scouterna/ui/commit/92b24f4a56304f75b86db4dcf6d70eda98e5e222) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Make buttons have same size as inputs
 
 ## 4.1.1
 
 ### Patch Changes
 
-- [`889ee65`](https://github.com/Scouterna/j26-components/commit/889ee65fc633857840d30d5cf60952a488507dc3) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Make tabber swiping work on Chrome
+- [`889ee65`](https://github.com/Scouterna/ui/commit/889ee65fc633857840d30d5cf60952a488507dc3) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Make tabber swiping work on Chrome
 
 ## 4.1.0
 
 ### Minor Changes
 
-- [`89c5126`](https://github.com/Scouterna/j26-components/commit/89c5126b7c235fca2cd5340e71b1001922c4ea4a) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Make card more prominent
+- [`89c5126`](https://github.com/Scouterna/ui/commit/89c5126b7c235fca2cd5340e71b1001922c4ea4a) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Make card more prominent
 
-- [`b693ae3`](https://github.com/Scouterna/j26-components/commit/b693ae327fa8a5d82d349056addbaefbb6c9f678) Thanks [@scriptcoded](https://github.com/scriptcoded)! - New app bar styling
+- [`b693ae3`](https://github.com/Scouterna/ui/commit/b693ae327fa8a5d82d349056addbaefbb6c9f678) Thanks [@scriptcoded](https://github.com/scriptcoded)! - New app bar styling
 
-- [`ca618ca`](https://github.com/Scouterna/j26-components/commit/ca618caebc2a2a01f52948716922753e1fd96c05) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add tabbed view for fully integrated swiping between tabs.
+- [`ca618ca`](https://github.com/Scouterna/ui/commit/ca618caebc2a2a01f52948716922753e1fd96c05) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add tabbed view for fully integrated swiping between tabs.
 
-- [`d6b24c2`](https://github.com/Scouterna/j26-components/commit/d6b24c23b9c64ee300a5973fec5c5077030c45fc) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add callout component
+- [`d6b24c2`](https://github.com/Scouterna/ui/commit/d6b24c23b9c64ee300a5973fec5c5077030c45fc) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add callout component
 
 ## 4.0.2
 
 ### Patch Changes
 
-- [`6f350f5`](https://github.com/Scouterna/j26-components/commit/6f350f57aa1fa548118357d50816626ad2ba258d) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add active states for touch devices to list items and selects.
+- [`6f350f5`](https://github.com/Scouterna/ui/commit/6f350f57aa1fa548118357d50816626ad2ba258d) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add active states for touch devices to list items and selects.
 
 ## 4.0.1
 
 ### Patch Changes
 
-- Updated dependencies [[`436a2a4`](https://github.com/Scouterna/j26-components/commit/436a2a46417bbad85d0bc4d3c5c06d5904cce970)]:
+- Updated dependencies [[`436a2a4`](https://github.com/Scouterna/ui/commit/436a2a46417bbad85d0bc4d3c5c06d5904cce970)]:
   - @scouterna/design-tokens@0.0.6
 
 ## 4.0.0
 
 ### Major Changes
 
-- [#101](https://github.com/Scouterna/j26-components/pull/101) [`5025bcf`](https://github.com/Scouterna/j26-components/commit/5025bcff44b393a997aad863c0444f47b4bbfb8d) Thanks [@daBack](https://github.com/daBack)! - New component Drawer
+- [#101](https://github.com/Scouterna/ui/pull/101) [`5025bcf`](https://github.com/Scouterna/ui/commit/5025bcff44b393a997aad863c0444f47b4bbfb8d) Thanks [@daBack](https://github.com/daBack)! - New component Drawer
 
-- [#104](https://github.com/Scouterna/j26-components/pull/104) [`ba60fd3`](https://github.com/Scouterna/j26-components/commit/ba60fd3fb99b790992baf0cda2893cdc9b45e715) Thanks [@daBack](https://github.com/daBack)! - New component Avatar
+- [#104](https://github.com/Scouterna/ui/pull/104) [`ba60fd3`](https://github.com/Scouterna/ui/commit/ba60fd3fb99b790992baf0cda2893cdc9b45e715) Thanks [@daBack](https://github.com/daBack)! - New component Avatar
 
 ### Minor Changes
 
-- [#103](https://github.com/Scouterna/j26-components/pull/103) [`95d4b7c`](https://github.com/Scouterna/j26-components/commit/95d4b7ccb9b580d04c8c9c917fd8b5e130c54a28) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Added Segmented Control component.
+- [#103](https://github.com/Scouterna/ui/pull/103) [`95d4b7c`](https://github.com/Scouterna/ui/commit/95d4b7ccb9b580d04c8c9c917fd8b5e130c54a28) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Added Segmented Control component.
 
 ## 3.2.0
 
 ### Minor Changes
 
-- [`191d1be`](https://github.com/Scouterna/j26-components/commit/191d1be1b11f76753fd8708650920f2ff8fd752e) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add action to list view item.
+- [`191d1be`](https://github.com/Scouterna/ui/commit/191d1be1b11f76753fd8708650920f2ff8fd752e) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add action to list view item.
 
 ## 3.1.0
 
 ### Minor Changes
 
-- [#95](https://github.com/Scouterna/j26-components/pull/95) [`2b81f4a`](https://github.com/Scouterna/j26-components/commit/2b81f4a1f2cc4a5a2613fd984ed98a69683657aa) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add tabs component.
+- [#95](https://github.com/Scouterna/ui/pull/95) [`2b81f4a`](https://github.com/Scouterna/ui/commit/2b81f4a1f2cc4a5a2613fd984ed98a69683657aa) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add tabs component.
 
 ## 3.0.0
 
 ### Major Changes
 
-- [`1d81444`](https://github.com/Scouterna/j26-components/commit/1d81444b4ae9f96cd8c0323bb2a15403f279239f) Thanks [@scriptcoded](https://github.com/scriptcoded)! - This release changes how validation works for input fields. The `validation`
+- [`1d81444`](https://github.com/Scouterna/ui/commit/1d81444b4ae9f96cd8c0323bb2a15403f279239f) Thanks [@scriptcoded](https://github.com/scriptcoded)! - This release changes how validation works for input fields. The `validation`
   prop has been superseeded by the `scoutValidate` event in conjunction with the
   `validity` prop on input fields.
 
@@ -204,140 +204,140 @@
 
 ### Patch Changes
 
-- [`b58a79a`](https://github.com/Scouterna/j26-components/commit/b58a79ade7acfefd71a24b6c0cae0268434039c2) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Make hover not stick on mobile.
+- [`b58a79a`](https://github.com/Scouterna/ui/commit/b58a79ade7acfefd71a24b6c0cae0268434039c2) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Make hover not stick on mobile.
 
 ## 2.2.6
 
 ### Patch Changes
 
-- [`03baeb7`](https://github.com/Scouterna/j26-components/commit/03baeb7b750a08e277dc4549e92e635281d284d8) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Variable size buttons
+- [`03baeb7`](https://github.com/Scouterna/ui/commit/03baeb7b750a08e277dc4549e92e635281d284d8) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Variable size buttons
 
 ## 2.2.5
 
 ### Patch Changes
 
-- [`c30d619`](https://github.com/Scouterna/j26-components/commit/c30d619ba408b886f0e1248d80ab11053328c93a) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Various fixes for j26-app
+- [`c30d619`](https://github.com/Scouterna/ui/commit/c30d619ba408b886f0e1248d80ab11053328c93a) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Various fixes for j26-app
 
 ## 2.2.4
 
 ### Patch Changes
 
-- [`3849b19`](https://github.com/Scouterna/j26-components/commit/3849b1998c353317d75225b2c0f67b6958ea4142) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add more documentation.
+- [`3849b19`](https://github.com/Scouterna/ui/commit/3849b1998c353317d75225b2c0f67b6958ea4142) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add more documentation.
 
 ## 2.2.3
 
 ### Patch Changes
 
-- [`eff875e`](https://github.com/Scouterna/j26-components/commit/eff875ef8061f66d283fbeb3e2855acb4eba528a) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add Tailwind theme
+- [`eff875e`](https://github.com/Scouterna/ui/commit/eff875ef8061f66d283fbeb3e2855acb4eba528a) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add Tailwind theme
 
-- [`2e106c3`](https://github.com/Scouterna/j26-components/commit/2e106c3bb2512128e3930fe8b729e5f5dd1b96e0) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Use inline-block for buttons
+- [`2e106c3`](https://github.com/Scouterna/ui/commit/2e106c3bb2512128e3930fe8b729e5f5dd1b96e0) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Use inline-block for buttons
 
-- Updated dependencies [[`eff875e`](https://github.com/Scouterna/j26-components/commit/eff875ef8061f66d283fbeb3e2855acb4eba528a)]:
+- Updated dependencies [[`eff875e`](https://github.com/Scouterna/ui/commit/eff875ef8061f66d283fbeb3e2855acb4eba528a)]:
   - @scouterna/design-tokens@0.0.5
 
 ## 2.2.2
 
 ### Patch Changes
 
-- [#84](https://github.com/Scouterna/j26-components/pull/84) [`a578b94`](https://github.com/Scouterna/j26-components/commit/a578b941d8ceb67ff2e5b9e6f70fcc16beb2464c) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Fix things that didn't work properly in scoutin.
+- [#84](https://github.com/Scouterna/ui/pull/84) [`a578b94`](https://github.com/Scouterna/ui/commit/a578b941d8ceb67ff2e5b9e6f70fcc16beb2464c) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Fix things that didn't work properly in scoutin.
 
-- Updated dependencies [[`a578b94`](https://github.com/Scouterna/j26-components/commit/a578b941d8ceb67ff2e5b9e6f70fcc16beb2464c)]:
+- Updated dependencies [[`a578b94`](https://github.com/Scouterna/ui/commit/a578b941d8ceb67ff2e5b9e6f70fcc16beb2464c)]:
   - @scouterna/design-tokens@0.0.4
 
 ## 2.2.1
 
 ### Patch Changes
 
-- Updated dependencies [[`9eaf114`](https://github.com/Scouterna/j26-components/commit/9eaf1149f20a0a65196a303183d580b63a28180c)]:
+- Updated dependencies [[`9eaf114`](https://github.com/Scouterna/ui/commit/9eaf1149f20a0a65196a303183d580b63a28180c)]:
   - @scouterna/design-tokens@0.0.3
 
 ## 2.2.0
 
 ### Minor Changes
 
-- [#82](https://github.com/Scouterna/j26-components/pull/82) [`d85c9e6`](https://github.com/Scouterna/j26-components/commit/d85c9e60588c9b35b0093eeccb08241c9f1e7924) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add support for checkbox and radio button to list view item
+- [#82](https://github.com/Scouterna/ui/pull/82) [`d85c9e6`](https://github.com/Scouterna/ui/commit/d85c9e60588c9b35b0093eeccb08241c9f1e7924) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add support for checkbox and radio button to list view item
 
-- [#73](https://github.com/Scouterna/j26-components/pull/73) [`6809433`](https://github.com/Scouterna/j26-components/commit/680943319672245a54532e3cc9010bac2a606994) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Added list view subheader
+- [#73](https://github.com/Scouterna/ui/pull/73) [`6809433`](https://github.com/Scouterna/ui/commit/680943319672245a54532e3cc9010bac2a606994) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Added list view subheader
 
-- [#77](https://github.com/Scouterna/j26-components/pull/77) [`f2e4ab2`](https://github.com/Scouterna/j26-components/commit/f2e4ab23f967cdb86e9b4649b2ca0f057ba24060) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add iconOnly option to button
+- [#77](https://github.com/Scouterna/ui/pull/77) [`f2e4ab2`](https://github.com/Scouterna/ui/commit/f2e4ab23f967cdb86e9b4649b2ca0f057ba24060) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add iconOnly option to button
 
-- [#77](https://github.com/Scouterna/j26-components/pull/77) [`f2e4ab2`](https://github.com/Scouterna/j26-components/commit/f2e4ab23f967cdb86e9b4649b2ca0f057ba24060) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add app bar component
+- [#77](https://github.com/Scouterna/ui/pull/77) [`f2e4ab2`](https://github.com/Scouterna/ui/commit/f2e4ab23f967cdb86e9b4649b2ca0f057ba24060) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add app bar component
 
-- [#81](https://github.com/Scouterna/j26-components/pull/81) [`2fcac32`](https://github.com/Scouterna/j26-components/commit/2fcac325abb76033d03f65e470022d0c1f469a2f) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add radio button component
+- [#81](https://github.com/Scouterna/ui/pull/81) [`2fcac32`](https://github.com/Scouterna/ui/commit/2fcac325abb76033d03f65e470022d0c1f469a2f) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add radio button component
 
 ### Patch Changes
 
-- [#81](https://github.com/Scouterna/j26-components/pull/81) [`2fcac32`](https://github.com/Scouterna/j26-components/commit/2fcac325abb76033d03f65e470022d0c1f469a2f) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Align all input components
+- [#81](https://github.com/Scouterna/ui/pull/81) [`2fcac32`](https://github.com/Scouterna/ui/commit/2fcac325abb76033d03f65e470022d0c1f469a2f) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Align all input components
 
 ## 2.1.0
 
 ### Minor Changes
 
-- [#67](https://github.com/Scouterna/j26-components/pull/67) [`1dbe174`](https://github.com/Scouterna/j26-components/commit/1dbe17458173884ed1376f9d4009c2aa6522b19a) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Added loader component.
+- [#67](https://github.com/Scouterna/ui/pull/67) [`1dbe174`](https://github.com/Scouterna/ui/commit/1dbe17458173884ed1376f9d4009c2aa6522b19a) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Added loader component.
 
-- [#70](https://github.com/Scouterna/j26-components/pull/70) [`5260616`](https://github.com/Scouterna/j26-components/commit/5260616570c355027284f417e5ab9f01b9690906) Thanks [@itsmedardan](https://github.com/itsmedardan)! - Add select component
+- [#70](https://github.com/Scouterna/ui/pull/70) [`5260616`](https://github.com/Scouterna/ui/commit/5260616570c355027284f417e5ab9f01b9690906) Thanks [@itsmedardan](https://github.com/itsmedardan)! - Add select component
 
-- [#72](https://github.com/Scouterna/j26-components/pull/72) [`ef75313`](https://github.com/Scouterna/j26-components/commit/ef75313af1db7190a5a3ff5c1627de4c084dd44b) Thanks [@daBack](https://github.com/daBack)! - New component Link
+- [#72](https://github.com/Scouterna/ui/pull/72) [`ef75313`](https://github.com/Scouterna/ui/commit/ef75313af1db7190a5a3ff5c1627de4c084dd44b) Thanks [@daBack](https://github.com/daBack)! - New component Link
 
-- [#71](https://github.com/Scouterna/j26-components/pull/71) [`2c1f18c`](https://github.com/Scouterna/j26-components/commit/2c1f18c6991a79e1d4ad13faceada6b639f2ab5a) Thanks [@daBack](https://github.com/daBack)! - New component stack
+- [#71](https://github.com/Scouterna/ui/pull/71) [`2c1f18c`](https://github.com/Scouterna/ui/commit/2c1f18c6991a79e1d4ad13faceada6b639f2ab5a) Thanks [@daBack](https://github.com/daBack)! - New component stack
 
-- [#63](https://github.com/Scouterna/j26-components/pull/63) [`eb05d26`](https://github.com/Scouterna/j26-components/commit/eb05d260a4999342109eb83687c9ad2c56246a52) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Added List View component.
+- [#63](https://github.com/Scouterna/ui/pull/63) [`eb05d26`](https://github.com/Scouterna/ui/commit/eb05d260a4999342109eb83687c9ad2c56246a52) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Added List View component.
 
 ### Patch Changes
 
-- [#63](https://github.com/Scouterna/j26-components/pull/63) [`eb05d26`](https://github.com/Scouterna/j26-components/commit/eb05d260a4999342109eb83687c9ad2c56246a52) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Added link support to Button and Bottom Bar Item.
+- [#63](https://github.com/Scouterna/ui/pull/63) [`eb05d26`](https://github.com/Scouterna/ui/commit/eb05d260a4999342109eb83687c9ad2c56246a52) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Added link support to Button and Bottom Bar Item.
 
-- [#63](https://github.com/Scouterna/j26-components/pull/63) [`eb05d26`](https://github.com/Scouterna/j26-components/commit/eb05d260a4999342109eb83687c9ad2c56246a52) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Removed global button styles in favor of Button component.
+- [#63](https://github.com/Scouterna/ui/pull/63) [`eb05d26`](https://github.com/Scouterna/ui/commit/eb05d260a4999342109eb83687c9ad2c56246a52) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Removed global button styles in favor of Button component.
 
 ## 2.0.0
 
 ### Minor Changes
 
-- [#64](https://github.com/Scouterna/j26-web-components/pull/64) [`9a9e32f`](https://github.com/Scouterna/j26-web-components/commit/9a9e32f5d55f086165020edd4fa4bc9a17bd5612) Thanks [@daBack](https://github.com/daBack)! - Added Switch component
+- [#64](https://github.com/Scouterna/ui/pull/64) [`9a9e32f`](https://github.com/Scouterna/ui/commit/9a9e32f5d55f086165020edd4fa4bc9a17bd5612) Thanks [@daBack](https://github.com/daBack)! - Added Switch component
 
-- [#62](https://github.com/Scouterna/j26-web-components/pull/62) [`e98d70a`](https://github.com/Scouterna/j26-web-components/commit/e98d70a22fe94418862299c22374c99d48831b1b) Thanks [@daBack](https://github.com/daBack)! - Added Checkbox Component
+- [#62](https://github.com/Scouterna/ui/pull/62) [`e98d70a`](https://github.com/Scouterna/ui/commit/e98d70a22fe94418862299c22374c99d48831b1b) Thanks [@daBack](https://github.com/daBack)! - Added Checkbox Component
 
 ## 1.0.0
 
 ### Minor Changes
 
-- [`765ab4e`](https://github.com/Scouterna/j26-web-components/commit/765ab4e1c574b0e429a46bed7b89060e510a8bd2) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add accessible input and field component.
+- [`765ab4e`](https://github.com/Scouterna/ui/commit/765ab4e1c574b0e429a46bed7b89060e510a8bd2) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Add accessible input and field component.
 
 ## 0.2.10
 
 ### Patch Changes
 
-- [`d3c69bf`](https://github.com/Scouterna/j26-web-components/commit/d3c69bfd83f1c461440c38c6e1a61a63883c869f) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Dummy change.
+- [`d3c69bf`](https://github.com/Scouterna/ui/commit/d3c69bfd83f1c461440c38c6e1a61a63883c869f) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Dummy change.
 
 ## 0.2.9
 
 ### Patch Changes
 
-- [`b612346`](https://github.com/Scouterna/j26-web-components/commit/b6123469f1c07a3e97066cc4353956776eb938b5) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Dummy change.
+- [`b612346`](https://github.com/Scouterna/ui/commit/b6123469f1c07a3e97066cc4353956776eb938b5) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Dummy change.
 
 ## 0.2.8
 
 ### Patch Changes
 
-- [`623d12a`](https://github.com/Scouterna/j26-web-components/commit/623d12ab86646bd77dcf28342e680471f4de4fef) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Dummy change.
+- [`623d12a`](https://github.com/Scouterna/ui/commit/623d12ab86646bd77dcf28342e680471f4de4fef) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Dummy change.
 
 ## 0.2.7
 
 ### Patch Changes
 
-- [`79bb9de`](https://github.com/Scouterna/j26-web-components/commit/79bb9dee901fc26b816319548cd9e03c5d8dac3f) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Dummy change.
+- [`79bb9de`](https://github.com/Scouterna/ui/commit/79bb9dee901fc26b816319548cd9e03c5d8dac3f) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Dummy change.
 
 ## 0.2.6
 
 ### Patch Changes
 
-- [`39e8ab7`](https://github.com/Scouterna/j26-web-components/commit/39e8ab738c52600c700bcb91ef4abb5862285f8c) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Dummy change.
+- [`39e8ab7`](https://github.com/Scouterna/ui/commit/39e8ab738c52600c700bcb91ef4abb5862285f8c) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Dummy change.
 
 ## 0.2.5
 
 ### Patch Changes
 
-- [`0e95524`](https://github.com/Scouterna/j26-web-components/commit/0e95524fbb0d2547ecdd9c3f4e30075ef481aae3) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Dummy release.
+- [`0e95524`](https://github.com/Scouterna/ui/commit/0e95524fbb0d2547ecdd9c3f4e30075ef481aae3) Thanks [@scriptcoded](https://github.com/scriptcoded)! - Dummy release.
 
 ## 0.2.4
 
