@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "id": "d660ec93-1d1f-80a3-8008-f61007ad0f5a",
+    "name": "Light",
+    "group": "Mode",
+    "description": "",
+    "isSource": false,
+    "selectedTokenSets": {
+      "Semantic typography": "enabled",
+      "Core": "enabled",
+      "Semantic light": "enabled"
+    }
+  }
+]
