@@ -7,7 +7,7 @@ import {
   Mixin,
   Prop,
 } from "@stencil/core";
-import checkIcon from "@tabler/icons/outline/check.svg";
+import checkIcon from "@phosphor-icons/core/assets/bold/check-bold.svg";
 
 import { inputMixin } from "../../mixins/inputMixin";
 

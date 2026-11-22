@@ -4,15 +4,22 @@ import { Meta } from "@storybook/addon-docs/blocks";
 
 # Using icons
 
-We design around [Tabler Icons](https://tabler.io/icons). Regardless if you use
-the Web Component or React UI library, use the `@tabler/icons` package for
-icons. Icons are usually provided as raw SVG strings.
+We design around [Phosphor Icons](https://phosphoricons.com). Regardless if you
+use the Web Component or React UI library, use the `@phosphor-icons/core`
+package for icons. Icons are usually provided as raw SVG strings, and take their
+color from the surrounding text. Any SVG that uses `currentColor` works.
+
+- Use the **fill** weight for things, such as navigation, tiles and feature
+  icons.
+- Use the **bold** weight for small functional icons, such as arrows, chevrons
+  and close buttons.
+- Icons are shown at 16, 20 or 24 px.
 
 ## Example usage in React
 
 ```jsx
 import { ScoutButton } from "@scouterna/ui-react";
-import IconHeart from "@tabler/icons/outline/heart.svg?raw";
+import IconHeart from "@phosphor-icons/core/assets/fill/heart-fill.svg?raw";
 
 <ScoutButton kind="primary" iconStart={IconHeart}>
   Like

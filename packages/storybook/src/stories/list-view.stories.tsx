@@ -4,10 +4,10 @@ import {
   ScoutListViewItem,
   ScoutListViewSubheader,
 } from "@scouterna/ui-react";
-import BoxIcon from "@tabler/icons/outline/box.svg?raw";
-import ClipboardDataIcon from "@tabler/icons/outline/clipboard-data.svg?raw";
-import LogoutIcon from "@tabler/icons/outline/logout.svg?raw";
-import WorldIcon from "@tabler/icons/outline/world.svg?raw";
+import BoxIcon from "@phosphor-icons/core/assets/fill/cube-fill.svg?raw";
+import ClipboardDataIcon from "@phosphor-icons/core/assets/fill/chart-bar-fill.svg?raw";
+import LogoutIcon from "@phosphor-icons/core/assets/fill/sign-out-fill.svg?raw";
+import WorldIcon from "@phosphor-icons/core/assets/fill/globe-fill.svg?raw";
 
 import preview from "#.storybook/preview";
 

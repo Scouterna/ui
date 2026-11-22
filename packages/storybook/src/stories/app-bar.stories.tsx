@@ -1,6 +1,6 @@
 import { ScoutAppBar, ScoutButton } from "@scouterna/ui-react";
-import ArrowLeftIcon from "@tabler/icons/outline/arrow-left.svg?raw";
-import DotsIcon from "@tabler/icons/outline/dots.svg?raw";
+import ArrowLeftIcon from "@phosphor-icons/core/assets/bold/arrow-left-bold.svg?raw";
+import DotsIcon from "@phosphor-icons/core/assets/bold/dots-three-bold.svg?raw";
 
 import preview from "#.storybook/preview";
 

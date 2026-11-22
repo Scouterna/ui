@@ -1,5 +1,5 @@
 import { Component, Event, type EventEmitter, Host, h, Prop } from "@stencil/core";
-import ChevronRightIcon from "@tabler/icons/outline/chevron-right.svg";
+import ChevronRightIcon from "@phosphor-icons/core/assets/bold/caret-right-bold.svg";
 
 export type ItemType = "button" | "link" | "radio" | "checkbox";
 
