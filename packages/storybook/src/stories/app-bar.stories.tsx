@@ -24,10 +24,10 @@ export const BasicExample = meta.story({
 export const WithSlottedButtons = BasicExample.extend({
   render: (args) => (
     <ScoutAppBar {...args}>
-      <ScoutButton slot="prefix" icon={ArrowLeftIcon} iconOnly variant="text">
+      <ScoutButton slot="prefix" iconStart={ArrowLeftIcon} iconOnly kind="tertiary" tone="inverse">
         Back
       </ScoutButton>
-      <ScoutButton slot="suffix" icon={DotsIcon} iconOnly variant="text">
+      <ScoutButton slot="suffix" iconStart={DotsIcon} iconOnly kind="tertiary" tone="inverse">
         More
       </ScoutButton>
     </ScoutAppBar>
