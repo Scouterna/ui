@@ -8,6 +8,7 @@ import {
   Prop,
 } from "@stencil/core";
 import checkIcon from "@tabler/icons/outline/check.svg";
+
 import { inputMixin } from "../../mixins/inputMixin";
 
 /**
@@ -21,10 +22,7 @@ import { inputMixin } from "../../mixins/inputMixin";
   styleUrl: "checkbox.css",
   scoped: true,
 })
-export class ScoutCheckbox
-  extends Mixin(inputMixin)
-  implements ComponentInterface
-{
+export class ScoutCheckbox extends Mixin(inputMixin) implements ComponentInterface {
   @Prop() checked: boolean = false;
 
   @Prop() disabled: boolean = false;

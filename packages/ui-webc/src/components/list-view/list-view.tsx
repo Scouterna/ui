@@ -11,9 +11,7 @@ export class ScoutListView {
   @Element() el!: HTMLElement;
 
   @Listen("scoutChecked")
-  onScoutChecked(
-    event: CustomEvent<{ checked: boolean; element: HTMLInputElement }>,
-  ) {
+  onScoutChecked(event: CustomEvent<{ checked: boolean; element: HTMLInputElement }>) {
     const { checked, element } = event.detail;
 
     if (element.type !== "radio" || !element.name || !checked) {
@@ -43,7 +41,7 @@ export class ScoutListView {
 
   render() {
     return (
-      // biome-ignore lint/a11y/useSemanticElements: custom-elements are not allowed as children of a <ul>
+      // custom-elements are not allowed as children of a <ul>
       <div class="list" role="list">
         <slot />
       </div>

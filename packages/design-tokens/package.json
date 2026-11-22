@@ -2,30 +2,30 @@
   "name": "@scouterna/design-tokens",
   "version": "0.0.7",
   "description": "Scouterna Design System Design Tokens",
-  "main": "index.js",
-  "exports": {
-    "./*": "./dist/*"
-  },
-  "files": [
-    "dist/"
-  ],
+  "keywords": [],
+  "license": "MIT",
+  "author": "",
   "repository": {
     "type": "git",
     "url": "https://github.com/Scouterna/ui.git",
     "directory": "packages/design-tokens"
   },
+  "files": [
+    "dist/"
+  ],
   "type": "module",
+  "main": "index.js",
+  "exports": {
+    "./*": "./dist/*"
+  },
   "scripts": {
     "build": "node build-tokens.mjs"
   },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
-  "packageManager": "pnpm@10.24.0",
+  "dependencies": {
+    "glob": "^13.0.0"
+  },
   "devDependencies": {
     "style-dictionary": "^5.1.1"
   },
-  "dependencies": {
-    "glob": "^13.0.0"
-  }
+  "packageManager": "pnpm@10.24.0"
 }

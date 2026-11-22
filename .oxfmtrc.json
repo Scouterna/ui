@@ -1,0 +1,11 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "ignorePatterns": [
+    "**/*.hbs",
+    "**/CHANGELOG.md",
+    "packages/design-tokens/tokens/**",
+    "packages/ui-webc/src/components.d.ts",
+    "packages/ui-webc/src/components/*/readme.md",
+    "packages/ui-react/lib/components/stencil-generated/**"
+  ]
+}

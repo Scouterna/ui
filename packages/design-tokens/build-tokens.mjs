@@ -1,5 +1,6 @@
 import { globSync } from "glob";
 import StyleDictionary from "style-dictionary";
+
 import { fixBaseValues } from "./fix-base-values.mjs";
 import { fixCalc } from "./fix-calc.mjs";
 import { fixType } from "./fix-type.mjs";

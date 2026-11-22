@@ -9,6 +9,7 @@ import {
   Watch,
 } from "@stencil/core";
 import xIcon from "@tabler/icons/outline/x.svg";
+
 import { inputMixin } from "../../mixins/inputMixin";
 
 export type Size = "medium" | "large";
@@ -45,10 +46,7 @@ export type InputMode =
   styleUrl: "input.css",
   scoped: true,
 })
-export class ScoutInput
-  extends Mixin(inputMixin)
-  implements ComponentInterface
-{
+export class ScoutInput extends Mixin(inputMixin) implements ComponentInterface {
   /**
    * Size of the input element. Large fields are typically used for prominent
    * inputs, such as a top search field on a page, while medium fields are used
@@ -199,11 +197,7 @@ export class ScoutInput
             aria-label="Rensa"
             onClick={() => this.clearValue()}
           >
-            <span
-              class="clear-icon"
-              style={{ "--icon-x": `url(${xIcon})` }}
-              aria-hidden="true"
-            />
+            <span class="clear-icon" style={{ "--icon-x": `url(${xIcon})` }} aria-hidden="true" />
           </button>
         )}
       </Host>

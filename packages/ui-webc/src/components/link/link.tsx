@@ -43,8 +43,7 @@ export class ScoutLink {
    *
    * _framename	Opens the linked document in the named iframe
    */
-  @Prop() target?: "_blank" | "_self" | "_parent" | "_top" | "framename" =
-    "_self";
+  @Prop() target?: "_blank" | "_self" | "_parent" | "_top" | "framename" = "_self";
 
   /**
    * Only sent if the link is a button.
@@ -75,8 +74,7 @@ export class ScoutLink {
         aria-label={this.linkAriaLabel || ""}
         rel={
           // This might not be our job, but better safe than sorry.
-          this.rel ??
-          (this.target === "_blank" ? "noopener noreferrer" : undefined)
+          this.rel ?? (this.target === "_blank" ? "noopener noreferrer" : undefined)
         }
       >
         {this.label}

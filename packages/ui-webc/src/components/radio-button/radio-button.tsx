@@ -7,6 +7,7 @@ import {
   Mixin,
   Prop,
 } from "@stencil/core";
+
 import { inputMixin } from "../../mixins/inputMixin";
 
 /**
@@ -19,10 +20,7 @@ import { inputMixin } from "../../mixins/inputMixin";
   styleUrl: "radio-button.css",
   scoped: true,
 })
-export class ScoutRadioButton
-  extends Mixin(inputMixin)
-  implements ComponentInterface
-{
+export class ScoutRadioButton extends Mixin(inputMixin) implements ComponentInterface {
   @Prop() checked: boolean = false;
 
   @Prop() disabled: boolean = false;

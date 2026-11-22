@@ -1,4 +1,5 @@
 import { ScoutButton, ScoutCallout } from "@scouterna/ui-react";
+
 import preview from "#.storybook/preview";
 
 const meta = preview.meta({
@@ -24,9 +25,7 @@ export const BasicExample = meta.story({
   },
   render: (args) => (
     <div style={{ maxWidth: "22rem", width: "100vw" }}>
-      <ScoutCallout {...args}>
-        Changes sync to your account as you make them.
-      </ScoutCallout>
+      <ScoutCallout {...args}>Changes sync to your account as you make them.</ScoutCallout>
     </div>
   ),
 });
@@ -75,11 +74,7 @@ export const Dismissible = meta.story({
         gap: "0.75rem",
       }}
     >
-      <ScoutCallout
-        variant="announcement"
-        dismissible
-        heading="Nytt i Scouterna-appen"
-      >
+      <ScoutCallout variant="announcement" dismissible heading="Nytt i Scouterna-appen">
         Nu kan du hantera din scoutgrupps kalender direkt från startsidan.
       </ScoutCallout>
       <ScoutCallout variant="tip" dismissible heading="Tips">

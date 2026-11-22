@@ -53,7 +53,7 @@ const stencilComponentConfiguration = {
     if (!webcName) return null;
     return parameters.docs.extractComponentDescription(webcName);
   },
-  // biome-ignore lint/suspicious/noExplicitAny: We need to cast becuase these are internal APIs.
+  // We need to cast becuase these are internal APIs.
 } as any;
 
 export default definePreview({
@@ -72,7 +72,7 @@ export default definePreview({
           <Controls />
 
           <Heading>Stories</Heading>
-          {/** biome-ignore lint/suspicious/noExplicitAny: Workaround to make Storybook remove the title so we can render it properly */}
+          {/** Workaround to make Storybook remove the title so we can render it properly */}
           <Stories title={false as any} />
         </>
       ),

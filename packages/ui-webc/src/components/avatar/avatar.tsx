@@ -1,10 +1,4 @@
-import {
-  Component,
-  type ComponentInterface,
-  getAssetPath,
-  h,
-  Prop,
-} from "@stencil/core";
+import { Component, type ComponentInterface, getAssetPath, h, Prop } from "@stencil/core";
 
 /**
  * The avatar component is used to display the user's profile picture.
@@ -36,7 +30,7 @@ export class ScoutAvatar implements ComponentInterface {
       }
       try {
         return getAssetPath("assets/fallbackImage.png");
-      } catch (_e) {
+      } catch {
         console.info("In storybook, rendering from storybook asset");
         return "fallbackImage.png";
       }

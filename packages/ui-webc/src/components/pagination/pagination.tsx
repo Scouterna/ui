@@ -99,9 +99,7 @@ export class ScoutPagination implements ComponentInterface {
         return noPagination.map((_, index) => (
           <button
             type="button"
-            onClick={() =>
-              this.scoutPaginationClick.emit({ selectedIndex: index })
-            }
+            onClick={() => this.scoutPaginationClick.emit({ selectedIndex: index })}
             class={{
               pageButton: true,
               selected: this.selectedIndex === index,
@@ -114,10 +112,7 @@ export class ScoutPagination implements ComponentInterface {
 
       const pages: (number | string)[] = [];
       const windowSize = this.maxAmountOfPagesShowing - 2;
-      let start = Math.max(
-        2,
-        this.selectedIndex - Math.floor(windowSize / 2) + 1,
-      );
+      let start = Math.max(2, this.selectedIndex - Math.floor(windowSize / 2) + 1);
       const end = Math.min(this.pages - 1, start + windowSize - 1);
 
       if (end - start < windowSize - 1) {
@@ -130,7 +125,7 @@ export class ScoutPagination implements ComponentInterface {
       if (end < this.pages - 1) pages.push("...");
       pages.push(this.pages);
 
-      return pages.map((page, _) => {
+      return pages.map((page) => {
         if (typeof page === "string") {
           return <div>{page}</div>;
         }

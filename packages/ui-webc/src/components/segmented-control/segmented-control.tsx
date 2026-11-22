@@ -91,9 +91,7 @@ export class ScoutSegmentedControl implements ComponentInterface {
     // buttons) is resized — for example when the component is placed inside a
     // flex parent that redistributes space after mount, or when the viewport
     // changes. Without this, the indicator stays at its mount-time width.
-    this.resizeObserver = new ResizeObserver(() =>
-      this.calculateIndicatorSizes(),
-    );
+    this.resizeObserver = new ResizeObserver(() => this.calculateIndicatorSizes());
     if (this.wrapperEl) this.resizeObserver.observe(this.wrapperEl);
 
     requestAnimationFrame(() => {
@@ -154,12 +152,9 @@ export class ScoutSegmentedControl implements ComponentInterface {
       ? parseFloat(getComputedStyle(this.wrapperEl).paddingLeft) || 0
       : 0;
 
-    this.widths = Array.from(this.el.children).map(
-      (child) => (child as HTMLElement).offsetWidth,
-    );
+    this.widths = Array.from(this.el.children).map((child) => (child as HTMLElement).offsetWidth);
     this.lefts = this.widths.map(
-      (_, index) =>
-        this.widths.slice(0, index).reduce((acc, w) => acc + w, 0) + baseLeft,
+      (_, index) => this.widths.slice(0, index).reduce((acc, w) => acc + w, 0) + baseLeft,
     );
   }
 }

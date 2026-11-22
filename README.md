@@ -34,6 +34,7 @@ ui/
 ## Creating a new component
 
 From the root directory, run the plop generator and follow the prompts:
+
 ```bash
 pnpm plop
 ```

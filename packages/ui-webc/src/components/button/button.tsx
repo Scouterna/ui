@@ -1,11 +1,4 @@
-import {
-  Component,
-  Event,
-  type EventEmitter,
-  Host,
-  h,
-  Prop,
-} from "@stencil/core";
+import { Component, Event, type EventEmitter, Host, h, Prop } from "@stencil/core";
 import Loader2Icon from "@tabler/icons/outline/loader-2.svg";
 
 export type Size = "medium" | "large";
@@ -68,9 +61,7 @@ export class ScoutButton {
             href: isDisabled ? undefined : this.href,
             target: this.target,
             // This might not be our job, but better safe than sorry.
-            rel:
-              this.rel ??
-              (this.target === "_blank" ? "noopener noreferrer" : undefined),
+            rel: this.rel ?? (this.target === "_blank" ? "noopener noreferrer" : undefined),
             "aria-disabled": isDisabled ? "true" : undefined,
           }
         : {
@@ -104,10 +95,7 @@ export class ScoutButton {
             <slot />
           </span>
           {this.iconPosition === "after" && icon}
-          <span
-            class="spinner"
-            style={{ "--icon-url": `url(${Loader2Icon})` }}
-          />
+          <span class="spinner" style={{ "--icon-url": `url(${Loader2Icon})` }} />
         </Tag>
       </Host>
     );

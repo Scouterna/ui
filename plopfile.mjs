@@ -39,8 +39,7 @@ export default function (
       {
         type: "add",
         path: "packages/storybook/src/stories/{{name}}.stories.tsx",
-        templateFile:
-          "plop-templates/component/storybook/component.stories.tsx.hbs",
+        templateFile: "plop-templates/component/storybook/component.stories.tsx.hbs",
       },
     ],
   });

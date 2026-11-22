@@ -1,5 +1,6 @@
 import { ScoutBottomBarItem } from "@scouterna/ui-react";
 import BonfireIcon from "iconoir/icons/bonfire.svg?raw";
+
 import preview from "#.storybook/preview";
 
 const meta = preview.meta({

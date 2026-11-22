@@ -4,7 +4,7 @@
 }
 
 ::slotted(scout-button) {
-  /* biome-ignore lint/complexity/noImportantStyles: This is a cheeky override, so we're good with it */
+  /* This is a cheeky override, so we're good with it */
   height: 100% !important;
 }
 

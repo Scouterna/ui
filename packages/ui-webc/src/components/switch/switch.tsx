@@ -7,6 +7,7 @@ import {
   Mixin,
   Prop,
 } from "@stencil/core";
+
 import { inputMixin } from "../../mixins/inputMixin";
 
 /**
@@ -21,10 +22,7 @@ import { inputMixin } from "../../mixins/inputMixin";
     delegatesFocus: true,
   },
 })
-export class ScoutSwitch
-  extends Mixin(inputMixin)
-  implements ComponentInterface
-{
+export class ScoutSwitch extends Mixin(inputMixin) implements ComponentInterface {
   /**
    * Indicates whether the switch is toggled on or off.
    */

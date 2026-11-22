@@ -27,9 +27,7 @@ export class ScoutAppBar {
 
   render() {
     const onSlotChange = (key: "hasPrefix" | "hasSuffix") => (e: Event) => {
-      this[key] =
-        (e.target as HTMLSlotElement).assignedNodes({ flatten: true }).length >
-        0;
+      this[key] = (e.target as HTMLSlotElement).assignedNodes({ flatten: true }).length > 0;
     };
 
     return (

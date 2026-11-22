@@ -15,8 +15,7 @@
 @media (hover: hover) {
   .radio:hover {
     border: 2px solid var(--color-gray-400);
-    box-shadow: inset 0px 0px 5px 5px
-      var(--color-background-brand-subtle-hovered);
+    box-shadow: inset 0px 0px 5px 5px var(--color-background-brand-subtle-hovered);
     cursor: pointer;
   }
 }

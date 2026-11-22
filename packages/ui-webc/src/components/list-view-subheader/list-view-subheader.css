@@ -1,4 +1,4 @@
-/** biome-ignore-all lint/complexity/noImportantStyles: https://github.com/tailwindlabs/tailwindcss/discussions/18628#discussioncomment-13915195 */
+/** The !important rules are needed because of https://github.com/tailwindlabs/tailwindcss/discussions/18628#discussioncomment-13915195 */
 
 :host {
   display: flex;

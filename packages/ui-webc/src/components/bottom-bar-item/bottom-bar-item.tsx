@@ -55,9 +55,7 @@ export class ScoutBottomBarItem {
             href: this.href,
             target: this.target,
             // This might not be our job, but better safe than sorry.
-            rel:
-              this.rel ??
-              (this.target === "_blank" ? "noopener noreferrer" : undefined),
+            rel: this.rel ?? (this.target === "_blank" ? "noopener noreferrer" : undefined),
           }
         : {};
 

@@ -1,11 +1,4 @@
-import {
-  Event,
-  type EventEmitter,
-  type MixedInCtor,
-  Prop,
-  State,
-  Watch,
-} from "@stencil/core";
+import { Event, type EventEmitter, type MixedInCtor, Prop, State, Watch } from "@stencil/core";
 
 export const inputMixin = <B extends MixedInCtor>(Base: B) => {
   class InputMixin extends Base {
@@ -113,9 +106,7 @@ export const inputMixin = <B extends MixedInCtor>(Base: B) => {
         | undefined,
     ) {
       if (!el) {
-        console.error(
-          "Input element reference is undefined. This should not happen.",
-        );
+        console.error("Input element reference is undefined. This should not happen.");
         return;
       }
       this.#inputElement = el;

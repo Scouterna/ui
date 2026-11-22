@@ -1,13 +1,4 @@
-import {
-  Component,
-  Element,
-  Event,
-  type EventEmitter,
-  Host,
-  h,
-  Prop,
-  State,
-} from "@stencil/core";
+import { Component, Element, Event, type EventEmitter, Host, h, Prop, State } from "@stencil/core";
 import AlertOctagonIcon from "@tabler/icons/outline/alert-octagon.svg";
 import AlertTriangleIcon from "@tabler/icons/outline/alert-triangle.svg";
 import CircleCheckIcon from "@tabler/icons/outline/circle-check.svg";
@@ -16,13 +7,7 @@ import SparklesIcon from "@tabler/icons/outline/sparkles.svg";
 import SpeakerphoneIcon from "@tabler/icons/outline/speakerphone.svg";
 import XIcon from "@tabler/icons/outline/x.svg";
 
-export type CalloutVariant =
-  | "info"
-  | "tip"
-  | "success"
-  | "warning"
-  | "error"
-  | "announcement";
+export type CalloutVariant = "info" | "tip" | "success" | "warning" | "error" | "announcement";
 
 const ICONS: Record<CalloutVariant, string> = {
   info: InfoCircleIcon,
@@ -71,8 +56,7 @@ export class ScoutCallout {
     const slot = this.el.shadowRoot?.querySelector(
       'slot[name="actions"]',
     ) as HTMLSlotElement | null;
-    this.hasActions =
-      !!slot && slot.assignedNodes({ flatten: true }).length > 0;
+    this.hasActions = !!slot && slot.assignedNodes({ flatten: true }).length > 0;
   };
 
   render() {
@@ -100,10 +84,7 @@ export class ScoutCallout {
               aria-label="Stäng"
               onClick={() => this.scoutDismiss.emit()}
             >
-              <div
-                class="dismiss-icon"
-                style={{ "--icon-url": `url(${XIcon})` }}
-              />
+              <div class="dismiss-icon" style={{ "--icon-url": `url(${XIcon})` }} />
             </button>
           )}
         </div>

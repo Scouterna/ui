@@ -1,8 +1,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 
 const typeVarRegex = /^\s*--type-.*\n/gm;
-const fontFamilySansRegex =
-  /(?<prefix>^\s*--fontfamily-sans:\s*)(?<value>.*)(?<suffix>;)/gm;
+const fontFamilySansRegex = /(?<prefix>^\s*--fontfamily-sans:\s*)(?<value>.*)(?<suffix>;)/gm;
 
 /**
  * Replaces references in a value with CSS variables.
@@ -21,10 +20,7 @@ export async function fixType(cssPath, jsPath) {
   let content = await readFile(cssPath, "utf-8");
 
   content = content.replace(typeVarRegex, "");
-  content = content.replace(
-    fontFamilySansRegex,
-    '$1"Source Sans 3 Variable", sans-serif$3',
-  );
+  content = content.replace(fontFamilySansRegex, '$1"Source Sans 3 Variable", sans-serif$3');
 
   const newLines = [];
 
@@ -34,16 +30,12 @@ export async function fixType(cssPath, jsPath) {
 
       const value = variant.original.$value;
 
-      const fontFamilies = value.fontFamilies
-        .map((family) => replaceReferences(family))
-        .join(", ");
+      const fontFamilies = value.fontFamilies.map((family) => replaceReferences(family)).join(", ");
       const fontSize = replaceReferences(value.fontSizes);
       const fontWeight = replaceReferences(value.fontWeights);
       const lineHeight = replaceReferences(value.lineHeights);
 
-      newLines.push(
-        `  ${varName}: ${fontWeight} ${fontSize}/${lineHeight} ${fontFamilies};`,
-      );
+      newLines.push(`  ${varName}: ${fontWeight} ${fontSize}/${lineHeight} ${fontFamilies};`);
     }
   }
 
